@@ -1,0 +1,37 @@
+\chapter{Proposed Work}
+Retinex Theory was formulated by Edwin H. Land In 1964. His theory and an extension, the “reset Retinex” were further formalized by Land and Mc Cann [1]. It was the first attempt to simulate and explain the human visual system how it perceives colours, based on experiments using Mondrian patterns [3].
+\section{Introduction}
+Retinex is the theory of human color vision proposed by Edwin Land to account for color sensations in real scenes. Color constancy experiments showed that color does not correlate with receptor responses. In real scenes, the content of the entire image controls appearances. A triplet of L, M, S cone responses can appear any color. Land coined the word “Retinex” (the contraction of retina and cortex) to identify the spatial image processing responsible for color constancy. Further, he showed that color sensations are predicted by three lightnesses observed in long-, middle-, and short-wave illumination. Retinex is also used as the name of computer algorithms that mimic vision’s spatial interactions to calculate the lightnesses observed in complex scenes.
+
+Edwin H. Land, the inventor of hundreds of film patents, was struck by experiments showing that color sensations in real complex images depend on scene content. Film responds to the light falling on each tiny local region. Land realized that vision’s mechanisms were very different from film. His early experiments studied the colors observed in red and white projections. He realized color appearance required both the cone responses to a local region and the neural spatial processing of the rest of the scene. He proposed the Retinex Theory.
+
+Land coined the word Retinex to describe three independent spatial channels. In 1964 he wrote: “We would propose that all of the receptors with maximum sensitivity to the long-waves in the spectrum, for example, operate as a unit to form a complete record of long-wave stimuli from objects being observed. (For convenience of reference, let us call this suggested retinal-cerebral system a “retinex.”). It is the word that describes the mechanism that performs the comparison of scene information to create the array of sensations of lightness in three channels.[1]
+
+
+\section{Retinex in Image Processing}
+Land described that the fundamental challenge of color vision shifted to the ability to predict lightness; that is, the spatial interactions found in post-receptor neural processes. In 1967 Land and McCann proposed a computational model for calculating lightness from the array of all scene radiances. The model compared each pixel with every other pixel in an image. The goal was to calculate the sensation of image segments that equaled what observers saw. In the past 50 years, there have been many implementations and variations of this process. They are called Retinex algorithms. It is curious that Land reserved the use of the term “Retinex” to describe three independent lightness channels. Today’s usage of the word includes a much wider range of computer algorithms that build calculated appearances out of arrays of radiances. To calculate lightnesses in complex scenes, one must: Capture scene radiances, Convert scene radiances to cone and rod quanta catches, Calculate lightness using all pixels in the scene, Compare calculated lightness with observer matches. The Land and McCann model used: Edge ratios, Gradient threshold (found to be unnecessary in later studies), Multiplication of edge ratios (made long-distance interactions), Reset to maxima (scaled the output) (introduced dependence on scene content, e.g., simultaneous contrast) Average of many spatial comparisons. The first computer implementation of the model used an array of 20 by 24 pixels. McCann, McKee, and Taylor showed that long-, middle-, and short-wave computed lightnesses predicted observer matches of color Mondrian’s in color constancy experiments.
+
+Since the late 1960s, computer imaging has shown remarkable advances. Digital images have replaced film in most of photography. Computer graphics has made image synthesis ubiquitous. Retinex image processing has grown with the advances in digital imaging . In the early 1980s Frankle and McCann introduced a multi-resolution algorithm that allowed efficient comparison of all pixels in the image. Jobson and Kotera with their colleagues have studied the NASA Retinex. Rizzi and colleagues have developed the Milan Retinex. Sobol extended that Retinex algorithm was used in the design of commercial cameras. Other algorithms have used Retinex spatial processing in color gamut-mapping applications.
+
+The important feature of real complex scenes is that the illumination is rarely uniform. Shadows and multiple reflections increase the dynamic range of light coming to our eyes and to cameras. The application of Retinex algorithms to high dynamic range (HDR) scenes has become a major topic of research and engineering applications. The limits of HDR scene capture and reproduction are controlled by optics, namely, optical veiling glare. Camera glare limits the range of light on the sensor, just as intraocular glare limits the range of light on the retina. The scene content controls the range of light in images. Vision’s post-receptor neural processes compensate for veiling glare. That explains humans’ high dynamic range of appearances from low-dynamic-range retinal images. The spatial mechanisms modeled by Retinex algorithms play a major role in compensating for glare and generating our range of color and lightness sensations.
+
+Over the years many variations of spatial processing mimicking human vision have been called Retinex algorithms.[2]
+
+The different types of retinex algorithms are: 
+\begin{itemize}
+		\item Single Scale Retinex algorithm (SSR)
+		\item Multiscale Retinex algorithm (MSR)
+		\item Multiscale retinex with Color Restoration algorithm (MSRCR) 
+\end{itemize}
+	
+\subsection{Single Scale Retinex algorithm (SSR)}
+Single Scale Retinex , is the most basic method for Retinex algorithm. A low pass filter is applied on $Ii (x, y)$ which is the input color image to estimate the illumination. This illuminations log signal is subtracted to get the output color image Ri(x,y).It is a 2D convolution of Gaussian surround function and ith component of the original image.
+
+It is given by , 
+
+
+
+
+
+\subsection{Multiscale Retinex algorithm (MSR)}
+\subsection{Multiscale retinex with Color Restoration algorithm (MSRCR)}

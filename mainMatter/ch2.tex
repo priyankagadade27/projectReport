@@ -1,0 +1,303 @@
+\chapter{Related Work}
+The Retinex Image Enhancement Algorithm is an automatic image enhancement method that enhances a digital image in terms of dynamic range compression, colour independence from the spectral distribution of the scene illuminate, and colour/ lightness rendition. There are several retinex based image Enhancement techniques. Some of them are described in this chapter.
+\section{Image Processing}
+Image processing is a method to perform some operations on an image, in order to get an enhanced image or to extract some useful information from it. It is a type of signal processing in which input is an image and output may be image or characteristics/features associated with that image. Nowadays, image processing is among rapidly growing technologies. It forms core research area within engineering and computer science disciplines too. Image processing basically includes the following three steps:
+	\begin{itemize}
+		\item Importing the image via image acquisition tools;
+		\item Analysing and manipulating the image;
+		\item Output in which result can be altered image or report that is based on image  		analysis.
+	\end{itemize}
+	
+There are two types of methods used for image processing namely, analogue and digital image processing. Analogue image processing can be used for the hard copies like printouts and photographs. Image analysts use various fundamentals of interpretation while using these visual techniques. Digital image processing techniques help in manipulation of the digital images by using computers. The three general phases that all types of data have to undergo while using digital technique are pre-processing, enhancement, and display, information extraction[9]. In this project, we are working on the enhancement phase. Thus the following section focuses on the study of image enhancement.
+
+
+\section{Image Enhancement Techniques}
+Image enhancement techniques can be divided into two main categories:
+\begin{itemize}
+	\item Spatial Domain Method
+	\item Frequency Domain Method
+\end{itemize}
+Spatial domain method directly deals with the pixel values of an image. Whereas Frequency domain method operates on Fourier transform of an image for enhancement of an image.
+
+
+\subsection{Spatial Domain Technique}
+The Spatial domain method is directly operated on pixels of an image. The pixel values are modified based on the problem domain. The objective of this method is to improve the perceptibility of information contained in an image and also enhancing the structural features can improve perceived image quality [10]. Spatial domain methods directly manipulate the image data array, either by point processing or area processing. Basically it deals with spatial frequency, i.e. difference between the highest and the lowest values of a contiguous set of pixels [11]. The technique regarding image enhancement using spatial domain methods can be divide into two categories -
+	\begin{itemize}
+		\item Global Image Enhancement
+		\item Local Image Enhancement
+	
+	\end{itemize}
+Global methods are mainly histogram modification that aims to exploit the full dynamic range of a rendering device by modifying the histogram of an image. The attractiveness is their simplicity and minor computational effort. However it is often necessary to enhance detail over a smaller area. So, the local image enhancement method plays a major role in those applications [11].\par 
+Image processing is defined as the process of analysing and manipulating images using a computer. Using computer algorithms to perform image processing on digital images is referred as Digital image processing. Image Enhancement is simple and most appealing areas among all the digital image processing techniques. Image enhancement is to improve the image quality so that the resultant image is better than the original image for a specific application. Hence Image Enhancement is a “subjective process” which means that the human perception decides the best method from the obtained results. As we know that frequency domain methods first transform the images into transform domain or frequency domain and then operate on the transformed images. After the process, the images are transformed back to spatial domain by applying inverse transforms.[12]
+There are many spatial domain techniques that are divided according to global or local image enhancement. Histogram Equalization is global image enhancement which is one of the simplest and widely used techniques. Histogram equalization is the technique by which the dynamic range of the histogram of an image is increased. It assigns the intensity values of pixels in the input image such that the output image contains a uniform distribution of intensities. It improves contrast and the goal of histogram equalization is to obtain a uniform histogram [14]. In HE, the cumulative density function (cdf) of the histogram is used as the intensity transfer function; this method enhances the contrast by distributing the cdf across the entire dynamic range. However, this even distribution creates artefacts’ in the smooth regions of the image. Moreover, it does not consider the boundaries, which degrades the sharpness of the resulting image [15].
+When the original histogram does not occupy the entire dynamic range of the image, HE produces washout effect which is the disadvantage of HE. Thus there are several techniques which based on HE has been proposed to overcome the disadvantages of original technique. One of the techniques is Adaptive Histogram Equalization. Adaptive histogram Equalization is local image enhancement. This is an extension to traditional Histogram Equalization technique. It enhances the contrast of images by transforming the values in the intensity image Unlike HE it operates on small data regions (tiles), rather than the entire image. Each tile's contrast is enhanced, so that the histogram of the output region approximately matches the specified histogram. The neighbouring tiles are then combined using bilinear interpolation in order to eliminate artificially induced boundaries [14]. In AHE, histogram of image is divided into many modified to match across boundaries. It produces good result in dark images. The contrast, especially in homogeneous areas, can be limited in order to avoid amplifying the noise which might be present in the image. There are some other technique which based on spatial domain methods such as Bi-histogram equalization and Laplacian. BHE splits the histogram into two parts based on where the mean lies. Each part is then enhanced independently using HE. BHE maintains the intensity mean of the original image, which suppresses the over enhancement problem. Unnatural images are, however, still produced [13]. Laplacian is used to enhance the edges of an image thus it is edge enhancing algorithm. It perform local enhancement of the brightness levels of image pixels. Therefore the resultant image has increase in local contrast at boundaries rectangular domains, and then each domain is passed through the histogram equalization. Once this is completed the brightness levels are enhanced.  Table 2.1 shows the summary of spatial techniques[28].
+
+\begin{table}[h!]
+	\begin{center}
+	\caption{Your first table.}
+    \label{tab:table1}
+	\begin{tabular}{ | m{4cm} | m{8cm}| }
+	\hline
+		Histogram Equalization & Adjusting the global contrast of an image. It is most effective method for gray scale images \\
+	\hline
+		Adaptive histogram Equalization & It is extension of HE and used within an image for local enhancement. It contains dark region and low contrast \\ 
+	\hline
+		Bi- histogram equalization & It maintains the intensity mean of the original image, which suppresses the over enhancement problem \\ 
+	\hline
+		Laplacian & It is mostly used for edge enhancement \\ 
+	\hline
+	\end{tabular}
+	\end{center}
+
+\end{table}
+
+\subsection{Frequency Domain Technique}
+Frequency domain method operates on the Fourier transform of an image. Image enhancement in the frequency domain is straightforward. We simply compute the Fourier transform of the image to be enhanced, multiply the result by a filter and take the inverse transform to produce the enhanced image. In frequency domain methods, the image is first transferred in to frequency domain. It means that, the Fourier Transform of the image is computed first. All the enhancement operations are performed on the Fourier transform of the image and then the Inverse Fourier transform is performed to get the resultant image. These enhancement operations are performed in order to modify the image brightness, contrast or the distribution of the grey levels. As a consequence the pixel value of the output image will be modified according to the transformation function applied on the input values [15]. The convolution theorem is the foundation of frequency domain techniques. Consider the following spatial domain operation:
+
+\begin{equation}
+	g(x,y)=h(x,y)*f(x,y)
+\end{equation}
+
+The following frequency domain relationship given by the convolution theorem 
+
+\begin{equation}
+	G (u, v) = H (u, v) F (U, v)
+\end{equation}
+
+
+Where g, f and h having Fourier transform G, H and F respectively. H is known as the transfer function of the process. Many image enhancement problems can be viewed in the form of the above equation. The main aim is to select a transfer function that changes the image in such a way that certain features of an image are enhanced. Examples: edge detection, noise removal.
+
+There are mainly three types of filters
+\begin{itemize}
+	\item Low pass filter
+	\item High pass filter
+	\item Band pass filter
+
+\end{itemize}
+
+In Low-pass filtering, sharp transitions and edges in the gray levels of an image contribute significantly to the high frequency content of its Fourier Transform. By attenuating a specified range of high-frequency components in the frequency domain, blurring is achieved. Through Low-pass filtering this task is performed.
+
+By High-pass filtering, Image sharpening can be achieved in the frequency domain. Low-frequency components will attenuated by high pass filter the without disturbing high frequency information.
+
+Band-pass filtering is a method in which the reflectance and illumination components can be filtered independently. The illumination component of an image is generally classified by slow spatial variation on the other hand the reflectance component of an image tends to vary abruptly. These characteristics lead to associating the low frequencies of the Fourier transform of the natural log of an image with illumination and high frequencies with reflectance thus it is filtered individually.
+
+\subsection{Comparison between Spatial Domain Technique And Frequency Domain Technique}
+\begin{itemize}
+	\item Spatial domain is manipulation of pixels of an image. It is the technique for changing the representation of an image and used in many field such as sharpening and smoothing images. Whereas Frequency domain is the manipulation of Fourier transforms to enhance an image and perform purely with convolution theorem and it is used in changing the position of an image. 
+	\item The advantage of spatial domain technique is that it is simple to understand and the complexity of these techniques is very low which helps in real time implementation. Whereas Frequency domain technique having advantages which include low computation complexity, easy to view, manipulation of image’s frequency composition and the special transformed domain property is easily applicable.
+	
+\end{itemize}
+
+The disadvantages of spatial domain technique is that it does not provides adequate robustness and perceivably. Whereas the disadvantage of Frequency Domain is that it cannot enhance properly every part of an image simultaneously and the automation of image enhancement is also very difficult. Table 2.2 shows the areas where Spatial Domain technique and Frequency domain technique are applied [16].
+
+\begin{table}[h!]
+	\begin{center}
+	\caption{Your first table.}
+    \label{tab:table1}
+	\begin{tabular}{| m{5cm} | m{8cm}| }
+	\hline
+		\textbf{Techniques} & \textbf{Feature}\\
+	\hline
+		Spatial Domain technique & It is used to alter The gray level value Of individual pixels and hence the overall contrast of the entire image. It is not possible to selectively enhance edges or other required information effectively. \\
+	\hline
+		Frequency domain technique & It is used to Easily enhance edges And other subtle information because they are high frequency content and frequency domain operates on frequency content of an image. In this technique, all parts of  an  image  are  not enhanced in uniform manner \\ 
+	
+	\hline
+	\end{tabular}
+	\end{center}
+
+\end{table}
+
+
+\section{BASICS OF RETINEX THEORY}
+Retinex is the theory of human color vision proposed by Edwin Land to account for color sensations in real scenes. Color constancy experiments showed that color does not correlate with receptor responses. In real scenes, the content of the entire image controls appearances. A triplet of L, M, S cone responses can appear any color. Land coined the word “Retinex” (the contraction of retina and cortex) to identify the spatial image processing responsible for color constancy. Further, he showed that color sensations are predicted by three lightnesses observed in long-, middle-, and short-wave illumination. Retinex is also used as the name of computer algorithms that mimic vision’s spatial interactions to calculate the lightnesses observed in complex scenes.
+
+\subsection{Overview}
+Edwin H. Land, the inventor of hundreds of film patents, was struck by experiments showing that color sensations in real complex images depend on scene content. Film responds to the light falling on each tiny local region. Land realized that vision’s mechanisms were very different from film. His early experiments studied the colors observed in red and white projections [1]. He realized color appearance required both the cone responses to a local region and the neural spatial processing of the rest of the scene. He proposed the Retinex Theory.
+
+Land coined the word Retinex to describe three independent spatial channels. In 1964 he wrote: “We would propose that all of the receptors with maximum sensitivity to the long-waves in the spectrum, for example, operate as a unit to form a complete record of long-wave stimuli from objects being observed. (For convenience of reference, let us call this suggested retinal-cerebral system a “retinex.”)” [2, 3, 4, 5]. It is the word that describes the mechanism that performs the comparison of scene information to create the array of sensations of lightness in three channels
+
+
+\subsection{Cone Quanta Catch}
+Visible light falls on objects that reflect some of it to the eye. Color vision depends on the spectrum of the illumination falling on an object and the spectrum of its reflectance. The product of these spectra describes the light coming to the eye. There are three types of cones in normal observers that are called L for long-wave-, M for middle-wave-, and S for short-wave-sensitive cones. The receptors’ spectral sensitivities multiplied by the light falling on the retina determines the L, M, S cone responses, namely, the “quanta catch” of the cones. The cones convert the quanta catch to nerve signals that pass through many spatial comparisons in the visual system. The cone quanta catch is the important transition from the physics of light to the physiology of vision. However, it is just the first step in the process.
+Figure 2.1 illustrates a laboratory experiment that generates equal L, M, S quanta catches from different reflectance papers.
+Light passes through filters that determine the spectrum of each illumination falling on circular pieces of paper. The light coming to the eye from the papers is modified again by the reflectance spectra of the papers. Further, in this experiment there is no light coming from the black surrounds.
+On the left, there is a tungsten light source at the top. There is a filter that absorbs more middle-wave than long- and short-wave visible light (magenta arrows). The green circular paper reflects more middle-wave than long- and short-wave light. The light coming to the eye is the product of these spectra. The integrals of that light using the three cone spectral sensitivities determine the L, M, S quanta catch values.
+
+
+%\begin{figure}[h!]
+ % \includegraphics[width=1.7]{equalQuanta.jpg}
+  %\caption{equalQuanta}
+  	%\label{fig:equalQuanta}
+%\end{figure}
+
+%\includegraphics{{C:\Harish\Latex\Sample\equalQuanta.jpg}}
+
+On the right, there is the same tungsten light source at the top. There is a different filter that absorbs more long-wave than middle- and short-wave light (cyan arrows). The right-red paper reflects more long-wave than middle- and short-wave light. In this experiment, the spectra of the two illuminants and the two reflectances were adjusted to generate the same triplet of LMS cone quanta catches. Under these conditions, the left-green and right-red papers are identical retinal stimuli. They appear equal to each other, but that color is neither red nor green.[17]
+
+\subsection{Mondrian Experiments}
+Land’s color Mondrian experiment is similar, with the exception that he used a complex array of papers to simulate real-world scenes. The important difference is that in complex scenes, a particular quanta catch can appear in any color: red, green, blue, yellow, white, or black.
+Figure 2.2. shows the double color Mondrian experiment [6]. It used two identical Mondrians made of color papers, and three different, non-overlapping spectral illuminants (long-, middle-, and short-wave visible light). In this experiment observers reported the colors of papers in the Mondrians. In this illustration, we will look at the circular red and green papers. Land adjusted the illuminant mixtures of light from the two sets of three projectors. The same amounts of L, M, S light came from the green circle on the left as from the red circle on the right. First, he turned on just the long-wave lights. He adjusted the amounts of illumination on the left-green and right-red circles so the meter readings were equal. Then, he did the same for middle- and short-wave light. The left-green and right-red circles had equal quanta catches by the L, M, S cones.
+
+
+%\begin{figure}[h!]
+ % \includegraphics[width=1.7]{landsExperiments.jpg}
+  %\caption{landsExperiments}
+  	%\label{fig:equalQuanta}
+%\end{figure}
+
+Two identical sets of matte colored papers, with separate L, M, S illuminating projectors with voltage transformers for control of the amount of light. Telephotometer readings were projected above the Mondrians. The experimenter separately measured the L, M, S radiances from a green circle in the left Mondrian. Then, he adjusted the L, M, S radiances from a red circle on the right Mondrian to be the same. Observers reported different red and green colors produced by identical light stimuli.
+
+In this complex scene, observers reported that equal quanta catches appeared green on the left and red on the right. Observers reported color constancy, namely, that the red paper looked red and the green paper looked green despite the identical cone quanta catch.
+
+Land repeated this experiment with all the Mondrian papers. A constant L, M, S quanta catch could generate any color sensation. The presence of the complex scene introduced more information to the visual system. The red and green papers appeared equal in Fig. 2.1. The red paper looked red and the green paper looked green in Fig. 2.2. The scene’s spatial content stimulated vision’s spatial image processing mechanisms to generate color constancy. The post-receptor visual processing plays a dominant role in color appearance in real scenes. Land’s word “Retinex” gave this spatial process a name. As well, he proposed a theoretical mechanism.[17]
+
+\subsection{Retinex Mechanism}
+Figure 2.3. illustrates the pair of Mondrians in only long-wave light with more light on the left than on the right. Their appearances are nearly constant. This is a common observation: humans are insensitive to large changes in uniform illumination.
+
+%\begin{figure}[h!]
+ % \includegraphics[width=1.7]{landsExperiments.jpg}
+  %\caption{landsExperiments}
+  	%\label{fig:equalQuanta}
+%\end{figure}
+
+The left Mondrian has more illumination than the right. Observers report that the left set is slightly lighter than the right. Each corresponding area is nearly the same lightness in the left and right Mondrians as shown in Figure 2.3
+
+As illustrated in Figure 2.3, the left-green circle looked dark when it generated the same L cone quanta catch as the lighter right-red circle. Vision’s spatial image processing rendered the red and green papers with different lightnesses in long-wave light. The lightnesses are stable with large changes in overall illumination.
+
+Figure 2.4. illustrates the Mondrian viewed in only middle-wave light. The left-green circle now looks light and the right-red looks dark. In the experiment they had the same M cone quanta catch. Vision’s spatial image processing rendered the red and green papers with different and opposite lightnesses in Fig. 2.4.
+
+%\begin{figure}[h!]
+ % \includegraphics[width=1.7]{landsExperiments.jpg}
+  %\caption{landsExperiments}
+  	%\label{fig:equalQuanta}
+%\end{figure}
+
+Now, the left Mondrian has less illumination than the right. In this wave band the pattern of lightnesses differs from that in long-wave light. That lightness pattern is indifferent to the amount of uniform illumination. Land adjusted the left side and right side illumination so that the circles had equal meter readings
+
+In summary, if the two Mondrians are side by side in the same band of wavelengths, but different overall intensities, the observers report nearly the same set of lightnesses at corresponding locations in the left and right Mondrians. However, one side is detectably lighter than the other. With large uniform changes in illumination, observers report nearly constant lightnesses of the individual papers.
+
+The left-green paper has more long-wave and less middle-wave illumination. The right-red paper has less long-wave and more middle-wave illumination. When adjusted, those adjustments in amount of illumination make the red and green papers have identical radiances. Those adjustments do not significantly alter the lightnesses of the areas in separate illumination. When viewing the Mondrian in combined illumination, in color, those changes in illumination do not change the color appearances of the red and green papers.
+
+
+These observations led Land to propose the Retinex theory. The triplet of apparent lightnesses, not cone quanta catches, determines the color appearance. Constant LMS lightnesses generate constant colors. That hypothesis led to a study of color appearances in L, M, S bands of light. Do all red colors have the same triplet of lightness appearances? Does a red color always look [light, dark, dark] in L, M, S light? Does a green always look [dark, light, dark]? Does color appearance always correlate with the triplet of L, M, S lightnesses?
+
+The experiment is easy. Find a red, a green, and a blue filter. Be sure that the filters exclude the other two-thirds of the spectra. With a green filter you should just see greens with different lightnesses. You should not see a mixture of greens and yellows and blues. If you do, you need a filter with a narrower band of transmission.
+
+Identify a group of red objects. Look at them sequentially through the L, M, S filters. Look at them in different ambient illuminations. Look at them at different times of the day. Look at them in sunlight and shadows. Red colors are always (light, dark, dark) in L, M, S light. The same dependence of the triplet of L, M, S lightnesses holds for all colors (Table 2.3). Lightness is the output of spatial image processing. It is the result of post-receptor spatial processing. That is why lightness does not correlate with cone quanta catch. However, color does correlate with three lightnesses in long-, middle-, and short-wave light.
+
+
+\begin{table}[h!]
+	\begin{center}
+	\caption{Correlation table of color appearances and the apparent lightnesses in L, M, 		S illumination.}
+    \label{tab:table1}
+	\begin{tabular}{| m{3cm} | m{3cm}|m{3cm}|m{3cm}| }
+	\hline
+		\textbf{Color Apperance} & \textbf{Apperance in L-Light} & \textbf{Apperance in M-Light} & \textbf{Apperance in S-Light}\\
+	\hline
+		Red & Light & Dark & Dark \\
+	\hline
+		Yellow & Light & Light & Dark \\ 
+	
+	\hline
+		Green & Dark & Light & Light \\ 
+	
+	\hline
+		Cyan & Dark & Light & light \\ 
+	
+	\hline
+		Black & Dark & Light & light \\ 
+	
+	\hline
+		Mangenta & Light & Dark & light \\ 
+	
+	\hline
+		White & Light & Light & light \\ 
+	\hline
+		Black & Dark & Dark & Dark \\ 
+	
+	\hline
+	\end{tabular}
+	\end{center}
+
+\end{table}
+
+Retinex theory predicts that the triplet of L, M, S lightnesses determines color. Colors are constant with changes in illumination because the triplet of lightnesses is nearly constant.
+
+Land’s observation still stands: The triplet of lightnesses correlates with color. The observation is important because a variety of different phenomena can influence lightness, such as simultaneous contrast, the Corn sweet effect, and assimilation. Regardless of the cause of the lightness changes, when two identical physical objects look different, color appearances correlate with their L, M, S lightnesses. In the color assimilation display (Fig. 2.5), there are two sets of nine red squares that have the same reflectance and appear the same (top left). However, if these red squares are surrounded by yellow and blue stripes, they look different (top center): the left red squares fall on top of the yellow stripes, and the right ones on the blue stripes. The left squares appear a purple red, while the right ones appear a yellow orange. In other words, the left squares appear more blue and the right ones more yellow.
+
+%\begin{figure}[h!]
+ % \includegraphics[width=1.7]{landsExperiments.jpg}
+  %\caption{landsExperiments}
+  	%\label{fig:equalQuanta}
+%\end{figure}
+
+In the L separation the corresponding squares are lighter on the right of the separation; in the M separation these patches are lighter; in the S separation they are darker on the right. Land’s Retinex predicts that whenever L and M separations are lighter and S separation is darker, then that patch will appear more yellow. Whenever S separation is lighter and L and M separations are darker, then that patch will appear more blue. Colors correlate with L, M, S lightnesses [17].
+
+\subsection{Retinex in Image Processing}
+The effect was described in 1971 by Edwin H. Land, who formulated "retinex theory" to explain it. The word "retinex" is a portmanteau formed from "retina" and "cortex", suggesting that both the eye and the brain are involved in the processing.
+
+The effect can be experimentally demonstrated as follows. A display called a "Mondrian" (after Piet Mondrian whose paintings are similar) consisting of numerous colored patches is shown to a person. The display is illuminated by three white lights, one projected through a red filter, one projected through a green filter, and one projected through a blue filter. The person is asked to adjust the intensity of the lights so that a particular patch in the display appears white. The experimenter then measures the intensities of red, green, and blue light reflected from this white-appearing patch. Then the experimenter asks the person to identify the color of a neighboring patch, which, for example, appears green. Then the experimenter adjusts the lights so that the intensities of red, blue, and green light reflected from the green patch are the same as were originally measured from the white patch. The person shows color constancy in that the green patch continues to appear green, the white patch continues to appear white, and all the remaining patches continue to have their original colors.
+
+Color constancy is a desirable feature of computer vision, and many algorithms have been developed for this purpose. These include several retinex algorithms. These algorithms receive as input the red/green/blue values of each pixel of the image and attempt to estimate the reflectances of each point. One such algorithm operates as follows: the maximal red value rmax of all pixels is determined, and also the maximal green value gmax and the maximal blue value bmax. Assuming that the scene contains objects which reflect all red light, and (other) objects which reflect all green light and still others which reflect all blue light, one can then deduce that the illuminating light source is described by (rmax, gmax, bmax). For each pixel with values (r, g, b) its reflectance is estimated as (r/rmax, g/gmax, b/bmax). The original retinex algorithm proposed by Land and McCann uses a localized version of this principle.
+
+Although retinex models are still widely used in computer vision, actual human color perception has been shown to be more complex.
+
+Land described that the fundamental challenge of color vision shifted to the ability to predict lightness; that is, the spatial interactions found in post-receptor neural processes. In 1967 Land and McCann proposed a computational model for calculating lightness from the array of all scene radiances [18]. The model compared each pixel with every other pixel in an image. The goal was to calculate the sensation of image segments that equaled what observers saw. In the past 50 years, there have been many implementations and variations of this process. They are called Retinex algorithms. It is curious that Land reserved the use of the term “Retinex” to describe three independent lightness channels. Today’s usage of the word includes a much wider range of computer algorithms that build calculated appearances out of arrays of radiances.
+
+To calculate lightnesses in complex scenes, one must:
+
+\begin{itemize}
+	\item Capture scene radiances.
+	\item Convert scene radiances to cone and rod quanta catches.
+	\item Calculate lightness using all pixels in the scene.
+	\item Compare calculated lightness with observer matches.
+\end{itemize}
+
+The Land and McCann model used:
+\begin{itemize}
+	\item Edge ratios.
+	\item Gradient threshold (found to be unnecessary in later studies).
+	\item Multiplication of edge ratios (made long-distance interactions).
+	\item Reset to maxima (scaled the output).
+	\item Average of many spatial comparisons
+\end{itemize}
+
+The first computer implementation of the model used an array of 20 by 24 pixels. McCann, McKee, and Taylor showed that long-, middle-, and short-wave computed lightnesses predicted observer matches of color Mondrians in color constancy experiments.
+
+Since the late 1960s, computer imaging has shown remarkable advances. Digital images have replaced film in most of photography. Computer graphics has made image synthesis ubiquitous. Retinex image processing has grown with the advances in digital imaging. In the early 1980s Frankle and McCann introduced a multi-resolution algorithm that allowed efficient comparison of all pixels in the image. Jobson and Kotera with their colleagues have studied the NASA Retinex. Rizzi and colleagues have developed the Milan Retinex. Sobol extended that Retinex algorithm was used in the design of commercial cameras. Other algorithms have used Retinex spatial processing in color gamut-mapping applications.
+
+The important feature of real complex scenes is that the illumination is rarely uniform. Shadows and multiple reflections increase the dynamic range of light coming to our eyes and to cameras. The application of Retinex algorithms to high dynamic range (HDR) scenes has become a major topic of research and engineering applications. The limits of HDR scene capture and reproduction are controlled by optics, namely, optical veiling glare. Camera glare limits the range of light on the sensor, just as intraocular glare limits the range of light on the retina. The scene content controls the range of light in images. Vision’s post-receptor neural processes compensate for veiling glare. That explains humans’ high dynamic range of appearances from low-dynamic-range retinal images. The spatial mechanisms modeled by Retinex algorithms play a major role in compensating for glare and generating our range of color and lightness sensations.
+
+Over the years many variations of spatial processing mimicking human vision have been called Retinex algorithms.[19]
+
+\subsection{Retinex in Image Enhancement}
+The retinex theory is first proposed by Land to model the imaging process of the human visual system. This theory assumes that the scene in human’s eyes is the product of reflectance and illumination. Most retinex based enhancement algorithms use different ways to estimate the illumination and remove it to obtain the reflectance as the enhanced image. The details and textures can be enhanced by illumination removal. While the enhanced results look over-enhanced and unnatural since the result does not meet with human vision system. It is well-known that human eye perception is a combined effect of reflectance and illumination. It is unreasonable to remove the illumination and only regard the reflectance as an improved result. Other retinex based algorithms firstly use logarithmic transformation to transform product into sum to reduce the computational cost, and then employ a variational model for enhancement. Note that the logarithmic transformation stretches low values and compresses high values, increasing the contrast of low intensities and decreasing the contrast of high intensities. The resulting reflectance is usually smoothed and loses some details which can be manageable. In many papers, some novel retinex based image enhancement approach using illumination adjustment is proposed in which some new variational model is established that is different from conventional models, where the model does not need the logarithmic transformation and is more appropriate for the decomposition because reflectance is constrained in image domain. So a fast alternating direction optimization method was adopted to solve the proposed old model, where the reflectance and illumination can be computed and decomposed. Then a simple and effective post-processing method of the decomposed illumination is used to make an adjustment for image enhancement. The enhanced image is obtained by combining the reflectance and the adjusted illumination. The naturalness of enhanced images can be preserved while details enhanced. Meanwhile, reflectance and illumination can be obtained as a by-product of the enhanced Image and this method has good clarity on naturalness preservation and detail enhancement due to the illumination adjustment and precise computed reflectance. Hence their common principle is to assign a new value to each pixel in an image based on spatial comparisons of light intensities. So with increase in better performance of retinex algorithm it is developed into many forms according to its application in grey images, colour images and mostly in real time image processing in field of medical images and texture feature parameters.
+
+The Retinex image enhancement algorithm [20] [21] [22] is an image enhancement method that enhances an image with dynamic range compression. It also provides colour constancy. It gives a computational human vision model. It deals separates two parameters. At first the illumination information is estimated and then the reflectance is obtained from using division. It is based on the image formation model which is given [1] by
+
+\begin{equation}
+	I (x, y) = L(x, y) r(x, y)
+\end{equation}
+
+
+Where I is the input image, L is illumination and r is reflectance. The image is first converted into the logarithmic domain in which multiplications and divisions are converted to additions and subtractions that makes the calculation simple. The sensitivity of human vision reaches a logarithmic curve. 
+    Retinex is based on the centre/surround algorithm [23] .The given centre pixel value is compared with the surrounding average pixel values to get the new pixel value. The input value of the centre surround functions is obtained by its centre input value and its neighbourhood.
+	An array of photoreceptor responses is there for each image location. This is given as input to the retinex algorithm which has the receptor class for each location in the image. The algorithm calculates a series of paths. For a single receptor class, it estimates the lightness values as a spatial array.
+	For computing each path, a starting pixel (x1) is first selected [24].Then a neighbouring pixel (x2) is randomly selected. The difference of the logarithms of the sensor responses at the two positions is then calculated.
+	The position of pixel x2 is obtained by adding the previous step with the accumulator register which is given by:
+	
+	\begin{equation}
+		A(x2) =A(x2) +\log_{10}(x2) −\log_{10}(x1)
+	\end{equation}
+
+Where $A(x2)$ is the accumulator registers for pixel $(x2)$.
+
+Counter register $N(x2)$ for position $x2$ is incremented. All registers and counters are set to zero when the calculation starts.
+
+The accumulation of position ($xi$) on the path is calculated by [24]:
+
+\begin{equation}
+	A (xi) =A (xi) + \log_{10}(x1)
+\end{equation}
+

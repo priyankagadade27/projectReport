@@ -1,0 +1,47 @@
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Introduction}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{Problem Definition}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.3}{Objective}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.4}{Scope}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.5}{Existing System}{chapter.1}% 6
+\BOOKMARK [1][-]{section.1.6}{Outline}{chapter.1}% 7
+\BOOKMARK [0][-]{chapter.2}{Related Work}{}% 8
+\BOOKMARK [1][-]{section.2.1}{Image Processing}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.2}{Image Enhancement Techniques}{chapter.2}% 10
+\BOOKMARK [2][-]{subsection.2.2.1}{Spatial Domain Technique}{section.2.2}% 11
+\BOOKMARK [2][-]{subsection.2.2.2}{Frequency Domain Technique}{section.2.2}% 12
+\BOOKMARK [2][-]{subsection.2.2.3}{Comparison between Spatial Domain Technique And Frequency Domain Technique}{section.2.2}% 13
+\BOOKMARK [1][-]{section.2.3}{BASICS OF RETINEX THEORY}{chapter.2}% 14
+\BOOKMARK [2][-]{subsection.2.3.1}{Overview}{section.2.3}% 15
+\BOOKMARK [2][-]{subsection.2.3.2}{Cone Quanta Catch}{section.2.3}% 16
+\BOOKMARK [2][-]{subsection.2.3.3}{Mondrian Experiments}{section.2.3}% 17
+\BOOKMARK [2][-]{subsection.2.3.4}{Retinex Mechanism}{section.2.3}% 18
+\BOOKMARK [2][-]{subsection.2.3.5}{Retinex in Image Processing}{section.2.3}% 19
+\BOOKMARK [2][-]{subsection.2.3.6}{Retinex in Image Enhancement}{section.2.3}% 20
+\BOOKMARK [0][-]{chapter.3}{Proposed Work}{}% 21
+\BOOKMARK [1][-]{section.3.1}{Introduction}{chapter.3}% 22
+\BOOKMARK [1][-]{section.3.2}{Retinex in Image Processing}{chapter.3}% 23
+\BOOKMARK [2][-]{subsection.3.2.1}{Single Scale Retinex algorithm \(SSR\)}{section.3.2}% 24
+\BOOKMARK [2][-]{subsection.3.2.2}{Multiscale Retinex algorithm \(MSR\)}{section.3.2}% 25
+\BOOKMARK [2][-]{subsection.3.2.3}{Multiscale retinex with Color Restoration algorithm \(MSRCR\)}{section.3.2}% 26
+\BOOKMARK [0][-]{chapter.4}{Implementation}{}% 27
+\BOOKMARK [1][-]{section.4.1}{Introduction}{chapter.4}% 28
+\BOOKMARK [1][-]{section.4.2}{Problem Definition}{chapter.4}% 29
+\BOOKMARK [1][-]{section.4.3}{Objective}{chapter.4}% 30
+\BOOKMARK [1][-]{section.4.4}{Scope}{chapter.4}% 31
+\BOOKMARK [1][-]{section.4.5}{Existing System}{chapter.4}% 32
+\BOOKMARK [1][-]{section.4.6}{Outline}{chapter.4}% 33
+\BOOKMARK [0][-]{chapter.5}{Result and Discussion}{}% 34
+\BOOKMARK [1][-]{section.5.1}{Introduction}{chapter.5}% 35
+\BOOKMARK [1][-]{section.5.2}{Problem Definition}{chapter.5}% 36
+\BOOKMARK [1][-]{section.5.3}{Objective}{chapter.5}% 37
+\BOOKMARK [1][-]{section.5.4}{Scope}{chapter.5}% 38
+\BOOKMARK [1][-]{section.5.5}{Existing System}{chapter.5}% 39
+\BOOKMARK [1][-]{section.5.6}{Outline}{chapter.5}% 40
+\BOOKMARK [0][-]{chapter.6}{Conclusion and Future Scope}{}% 41
+\BOOKMARK [1][-]{section.6.1}{Introduction}{chapter.6}% 42
+\BOOKMARK [1][-]{section.6.2}{Problem Definition}{chapter.6}% 43
+\BOOKMARK [1][-]{section.6.3}{Objective}{chapter.6}% 44
+\BOOKMARK [1][-]{section.6.4}{Scope}{chapter.6}% 45
+\BOOKMARK [1][-]{section.6.5}{Existing System}{chapter.6}% 46
+\BOOKMARK [1][-]{section.6.6}{Outline}{chapter.6}% 47

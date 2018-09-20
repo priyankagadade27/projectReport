@@ -1,0 +1,98 @@
+%==================Document Class and Packeges=====================
+\documentclass[12pt,a4paper]{report}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=1.5in,right=1in,top=2cm,bottom=2cm]{geometry}
+	\graphicspath{{images/}}
+\usepackage{times}
+\usepackage{nomencl}
+\usepackage[round]{natbib}
+\usepackage{appendix}
+\usepackage{setspace}
+\usepackage{color}
+\usepackage{fancybox}
+\usepackage{lipsum}
+\usepackage[bookmarks=true]{hyperref}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{array}    % for Table array
+\DeclareUnicodeCharacter{2212}{-}     %! Package inputenc Error: Unicode char − (U+2212)
+\setlength{\parindent}{4em}           % Indentation
+\setlength{\parskip}{1em}             % Spacing after paragraph
+\renewcommand{\baselinestretch}{1.5}  % For Spacing
+%==================Edited Commands and Pagelayouts=====
+
+\fancyhead{}
+\fancyhead[RO,LE]{Image Enhancement}
+\fancyfoot{}
+\fancyfoot[LE,RO]{\thepage}
+\fancyfoot[LO,CE]{Chapter \thechapter}
+\fancyfoot[CO,RE]{Priyanka B. Waghmode}
+
+%\fancyhf{}
+%\fancyhead[RO,LE]{Thesis Title}
+%\fancyhead[LE,RO]{\thepage}
+%\fancyhead[RE]{\it{\nouppercase{\leftmark}}}
+%\fancyhead[LO]{\it{\nouppercase{\rightmark}}}
+%\fancyfoot[CE,CO]{\small GF's Godavari College of Engg., Jalgaon}
+%======================================================
+
+
+\begin{document}
+
+%=============Front Matters============================
+%title
+%dedication
+%declaration
+%Ack
+%abstract
+\include{frontMatter/frontPage}
+
+%========End Front Matters=============================
+
+\include{innerPage/innerPage}
+\include{certificate/certificate}
+\include{declaration/declaration}
+\include{dissertationApprovalSheet/approvalSheet}
+\include{ack/ack}
+\include{abstract/abstracts}
+
+%======================================================
+
+\tableofcontents
+
+
+\listoffigures
+
+
+\listoftables
+
+%=====================Main Matters====================
+\include{mainMatter/ch1}
+\include{mainMatter/ch2}
+\include{mainMatter/ch3}
+\include{mainMatter/ch4}
+\include{mainMatter/ch5}
+\include{mainMatter/ch6}
+%==================End Main Matters==================
+
+%=================Back Matter========================
+\bibliographystyle{plainnat}
+\bibliography{backMatter/myBib}
+
+\begin{appendices}
+
+
+\end{appendices}
+\printnomenclature
+
+
+
+\end{document}
