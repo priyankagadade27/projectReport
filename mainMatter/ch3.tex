@@ -1,11 +1,8 @@
 \chapter{Proposed Work}
-Retinex Theory was formulated by Edwin H. Land In 1964. His theory and an extension, the “reset Retinex” were further formalized by Land and Mc Cann [1]. It was the first attempt to simulate and explain the human visual system how it perceives colours, based on experiments using Mondrian patterns [3].
+Image enhancement improves the quality of images for human viewing. There are often serious discrepancies existing between images and the direct observation of the real scenes. Human perception has natures of dynamic range compression and color rendition on the scenes. It can compute the details across a large range of spectral and lightness variations, thus it is color constant. Single-scale Retinex (SSR) was defined as an implementation of center/surround Retinex. Superposition of weighted different scale SSR balances both dynamic range compression and tonal rendition, which is Multiscale Retinex (MSR). For color images, spatial averages of the three color bands are far from equal, thus the output appears grey. To address this issue, a weight factor for different channels is introduced which is Multiscale Retinex with color restoration (MSRCR). In this paper, SSR, MSR and MSRCR systems for image enhancement are implemented and their performances are compared using MATLAB as the software tool.
+
 \section{Introduction}
-Retinex is the theory of human color vision proposed by Edwin Land to account for color sensations in real scenes. Color constancy experiments showed that color does not correlate with receptor responses. In real scenes, the content of the entire image controls appearances. A triplet of L, M, S cone responses can appear any color. Land coined the word “Retinex” (the contraction of retina and cortex) to identify the spatial image processing responsible for color constancy. Further, he showed that color sensations are predicted by three lightnesses observed in long-, middle-, and short-wave illumination. Retinex is also used as the name of computer algorithms that mimic vision’s spatial interactions to calculate the lightnesses observed in complex scenes.
-
-Edwin H. Land, the inventor of hundreds of film patents, was struck by experiments showing that color sensations in real complex images depend on scene content. Film responds to the light falling on each tiny local region. Land realized that vision’s mechanisms were very different from film. His early experiments studied the colors observed in red and white projections. He realized color appearance required both the cone responses to a local region and the neural spatial processing of the rest of the scene. He proposed the Retinex Theory.
-
-Land coined the word Retinex to describe three independent spatial channels. In 1964 he wrote: “We would propose that all of the receptors with maximum sensitivity to the long-waves in the spectrum, for example, operate as a unit to form a complete record of long-wave stimuli from objects being observed. (For convenience of reference, let us call this suggested retinal-cerebral system a “retinex.”). It is the word that describes the mechanism that performs the comparison of scene information to create the array of sensations of lightness in three channels.[1]
+The human visual system is better than machines when processing images. Observed images of a real scene are processed based on brightness variations. The images captured by machines are easily affected by environmental lighting condition, which tends to reduce its dynamic range[1]. On the contrary, the human visual system can automatically compensate the image information by psychological mechanism of color constancy[2]. Color constancy, an approximation process of human perception system, makes the perceived color of a scene or objects remain relatively constant even with varying illumination conditions. Land [3] proposed a concept of the Retinex, formed from "retina" and "cortex", suggesting that both the eye and the brain are involved, to explain the color constancy processing of human visual systems. Although single-scale retinex (SSR) algorithm could support different dynamic-range compressions, the multi-scale retinex (MSR) can better approximate human visual processing by transforming recorded images into a rendering which is much closer to the human perception[4] of the original scene. MSR is good for gray images. But it could be a problem for the color images because it does not consider the relative intensity of color bands. This can be seen from MSR output which is the relative reflectance‘s[5] in the spatial domain. Considering the images out of gray world, whose average intensity for the three color bands are far from equal, the output pixel values of MSR for three channels will be more close, which makes it look more gray.The solution to this problem is MSRCR that introduces weights for three color channels depending on the relative intensity of the three channels in the original images
 
 
 \section{Retinex in Image Processing}
@@ -24,14 +21,235 @@ The different types of retinex algorithms are:
 		\item Multiscale retinex with Color Restoration algorithm (MSRCR) 
 \end{itemize}
 	
-\subsection{Single Scale Retinex algorithm (SSR)}
-Single Scale Retinex , is the most basic method for Retinex algorithm. A low pass filter is applied on $Ii (x, y)$ which is the input color image to estimate the illumination. This illuminations log signal is subtracted to get the output color image Ri(x,y).It is a 2D convolution of Gaussian surround function and ith component of the original image.
+\subsection{Single Scale Retinex (SSR)}
+The basics of SSR include a logarithmic photoreceptor function that approximates the vision system based on a center/surround [6] function. The SSR is given by:
+\begin{equation}
+	R_{i}(x,y)=\log_{i}-\log[F(x,y)\*I_{i}(x,y)]
+\end{equation}
+where Ii (x,y) is image distribution in the ith color band,F(x,y) is the normalized surround function[7] such that:
 
-It is given by , 
+\begin{equation}
+	\iint F(x,y)dxdy=1
+\end{equation}
+
+The purpose of the logarithmic manipulation is to transform a ratio at the pixel level to a mean value for a
+larger region. The general form of the center/surround retinex is similar to the Difference-of-Gaussian (DOG)
+function widely used in natural vision science to model both the receptive fields of individual neurons and
+perceptual processes. The only extensions required are i) to greatly enlarge and weaken the surround Gaussian (as
+determined by its space and amplitude constants) and ii)to include a logarithmic function to make subtractive
+inhibition into a shunting inhibition (i.e., arithmetic division). The surround space function computes the
+average of the surrounding pixel values and assigns it to the center pixel.
+Land [3] proposed an inverse square spatial surround function:
+
+\begin{equation}
+	F(x,y)=K*exp(-\frac{r^2}{c^2})
+\end{equation}
+Moore suggested the exponential formula with absolute
+parameter:
+
+\begin{equation}
+	F(x,y)=exp(-\frac{r}{c}
+\end{equation}
+Hurlbert [8] suggested:
+
+\begin{equation}
+	F(x,y)=K*exp(-\frac{r^2}{c^2}
+\end{equation}
+
+For a given space constant, the inverse-square surround
+function accounted for a greater response from the
+neighboring pixels than the exponential and Gaussian
+functions. The spatial response of the exponential
+surround function was larger than that of the Gaussian
+function at distant pixels. Therefore, the inverse-square
+surround function was more commonly used in global
+dynamic range compression and the Gaussian surround
+function was generally used in regional dynamic range
+compression[9]. The exponential and Gaussian surround
+functions were able to produce good dynamic range
+compression over neighboring pixels. The selection of
+space constant is related with visual angle in the direct
+observation. But the value cannot be theoretically
+modeled and determined. Basically there is a trade-off
+between dynamic compression, (for example, details in
+the shadow) and color rendition.
+SSR is incapable of simultaneously providing sufficient
+dynamic range compression and tonal rendition. It also
+introduces halos around the objects.
+
+\subsection{Multiscale Retinex (MSR)}
+In order to preserve both the dynamic range compression
+and color rendition, Multi-scale retinex, which is a
+combination of weighted different scales of SSR [10], is
+a good solution:
+
+\begin{equation}
+	R_{MSR_{i}}=\sum_{n=1}^{N}w_{n}R_{n_{i}}
+\end{equation}
+
+where N is the number of the scales, Rni is the ith
+component of the nth scale, wn is the weight of the nth
+scale. For MSR, the number of scales needed, scale
+values and weight values are important. Experiments
+showed that three scales are enough for most of the
+images and the weights can be equal. Generally fixed
+scales of 15, 80 and 250 can be used, or scales of fixed
+portion of image size can be used. The weights can be
+adjusted to weigh more on dynamic range compression
+or color rendition [11]. The MSR based images have
+significant dynamic range compression in the boundary
+between the light parts and dark parts and reasonable
+color rendition in the whole image scale.
+
+MSR combined various SSR weightings, selecting the
+number of scales used for the application and evaluating
+the number of scales that can be merged. Important
+issues to be concerned were the number of scales and
+scaling values in the surround function, and the weights
+in the MSR. The best weights had to be chosen in order
+to obtain suitable dynamic-range compression at the
+boundary between light and dark parts of the image, and
+to maximize the brightness rendition [12] over the entire
+image. MSR worked by compensating for lighting
+variations to approximate the human perception of a real
+scene. There were two methods to achieve this: (1)
+compare the psychophysical mechanisms between the
+human visual perceptions of a real scene and a captured
+image, and (2) compare the captured image with the
+measured reflectance values of the real scene.
+
+Thus the method involved combining specific features of
+MSR with processes of SSR, in which the
+center/surround operation was a Gaussian function. The
+logarithm was then applied after surround function
+processing (i.e., two-dimensional spatial convolution).
+Next, appropriate gain and offset values were determined according to the retinex output and the characteristics of
+the histogram. These values were constant for all the
+images. This procedure yielded the MSR function.
+However, it is difficult to predict whether the color of the
+reproduction will be accurate; and it has issues of color
+sensitivity [13].
 
 
 
-
-
-\subsection{Multiscale Retinex algorithm (MSR)}
 \subsection{Multiscale retinex with Color Restoration algorithm (MSRCR)}
+To address the drawback of MSR with regard to color
+restoration, we introduced weights for three color
+channels depending on the relative intensity of the three
+channels in the original images. The relative intensity of
+three channels is given by:
+
+\begin{equation}
+	I_{i}(x,y)=\frac{I_{i}(x,y)}{\sum_{j=1}^{s}I_{i}(x,y)}
+\end{equation}
+
+$I_{i}$ is the $i^{th}$ band of the input image and S is the total
+number of color bands. The color restoration [14] is
+given by:
+
+\begin{equation}
+	C_{i}(x,y)=f[I_{i}(x,y)]
+\end{equation}
+
+The best overall color restoration function is given by:
+
+\begin{equation}
+	C_{i}(x,y)=\beta \log[\alpha I_{i}(x,y)]
+\end{equation}
+
+where $\beta$ is the gain constant and $\alpha$ controls the strength of
+non-linearity.
+The general form of the MSRCR can be summarized by
+the following equation:
+
+\begin{equation}
+	I_{i}(x,y_=\frac{d_{max}}{r_{max}-r_{min}}*(I_{i}(x,y)-r_{min})
+\end{equation}
+
+where $i =1, ….. N$, ws is the weight of the scale, $I_{i}$ is the
+ith band of the input image, and N is the number of bands
+in the input image. The surround function $M_{s}$ is defined
+by:
+
+\begin{equation}
+	M_{s}(x,y)=K exp[{\sigma^{2}}_{s}/(x^{2}+y^{2})]
+\end{equation}
+
+where $\sigma_{s}$ is the standard deviation of the $S^{th}$ surround
+function, and
+
+\begin{equation}
+	\iint K exp[{\sigma^{2}}_{s}/(x^{2}+y^{2})]dx dy =1
+\end{equation}
+
+\begin{equation}
+	F_{i}(x,y)=G_{f} \log big[\frac{I_{i}(x,y)}{\sum_{n=1}^N I_{n}(x,y)}-O_{f}\big]
+\end{equation}
+
+The $G_{f}$ and Of are color restoration factors defined as
+gain and offset respectively. The final gain and offset
+values are needed to scale the output of the $\log$ domain
+operations to the (R, G, B) color space, and $G_{f}$ and Of
+control the degree to which the color restoration function
+$F(x,y)$ affects the overall color of the output image. These
+constants, the number of scales, $S$, and the widths of the
+surround functions $\gamma_{s}$, are image independent in the sense
+that we apply the same (canonical) set of constants to
+every image that we process.
+
+Some of the images processing related issues in MSRCR
+are:
+\begin{itemize}
+	\item Negative Offset:\\
+	This is an attempt to increase the dynamic range (i.e.
+visual contrast) provided by the device but is often
+photometrically incorrect and results in false zeroes. The
+effect of the MSRCR is to produce a harsher-than-normal
+contrast. A simple correction, i.e. application of a
+positive offset to the original image can mitigate this
+effect.
+
+\end{itemize}
+
+\begin{itemize}
+	\item Automatic Gain and Offset [15]:\\
+	A negative offset is typically applied to map the
+minimum value to black and then a gain is applied to
+map the resultant maximum value to white. Care is taken
+to ensure that actual white exists in the scene. The
+MSRCR is very resilient to such adjustments. Since the
+difference between the MSRCR outputs in the original
+and the auto/gain case is insignificant, the result is not
+shown here.
+
+\end{itemize}
+
+\begin{itemize}
+	\item Positive Offset:\\
+	Typically brightness in an image is increased by applying
+a positive offset, which often manifests itself as an
+overall haziness in the input image. Though the
+application of the MSRCR reduces this haziness, there is
+still a sense of haziness overall. Further alleviation of this
+effect can be achieved by reducing the final offset value;
+$O_{r}$ from its canonical value.
+In this paper, color problems were focused utilizing
+MSRCR as an image processing technique to solve the
+problems of the accuracy of the color of the reproduction.
+The main practical consequence of MSR is that it is not
+appropriate for applications which are sensitive to color.
+The results of MSRCR prove that it is efficient to avoid
+graying out effects. It maintains good color rendition and
+color constancy.
+\end{itemize}
+
+\begin{figure}
+	\includegraphics[scale=0.5]{images/ch3/retinexModel.jpg}
+	\caption{Result of Retinex Model}
+\end{figure}
+
+
+
+
+
+

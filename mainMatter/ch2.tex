@@ -1,4 +1,300 @@
-\chapter{Related Work}
+\chapter{Relate d Work}
+While this effect may be desirable in an artistic setting, it is sometimes necessary to undo this degradation. For example, several laptop vision algorithms have confidence the idea that the input image is strictly the scene radiance, i.e., there’s no disturbance from haze. When this assumption is violated, algorithmic errors can occur. Among current haze removal analysis, haze estimation strategies is divided into two broad classes of either hoping on extra information or employing previous assumption.
+
+\section{Digital Image Processing}
+\subsection{Light and visible spectrum}
+If a beam of white light passes through a glass prism, the human can see that the beam of light is broken and the six colors of the spectrum appear: red, orange, yellow, green, blue and violet (Figure\ref{fig:colorSpectrum}). This is known as refraction and was discovered by Sir Isaac Newton in 1666. In this way, you can understand that white light, existing everywhere, is composed of a spectrum of colors and collided with a body, it absorbs any of these components and reflects others. The reflected colors are what our eyes can perceive. [4]
+\begin{figure}
+  \includegraphics[width=\linewidth]{images/ch2/colorSpectrum.jpg}
+  \caption{Color spectrum seen by passing White light through a prism}
+  \label{fig:colorSpectrum}
+\end{figure}
+
+Basically, the colors that human perceive depend on the nature of the light reflected from the object. So the visible range by human eyes can be seen (Figure \ref{fig:wavelength}) as a little part within the electromagnetic spectrum and include wavelengths from 380 nm to 780 nm. The human eye perceives light from each of these wavelengths as a different color. [4]
+
+
+\begin{figure}
+  \includegraphics[width=\linewidth]{images/ch2/wavelength.jpg}
+  \caption{Wavelengths comprising the visible range of the electromagnetic spectrum}
+  \label{fig:wavelength}
+\end{figure}
+
+Primary color is a color that cannot be obtained by mixing any other one. This is an idealized model, based on the biological response of the receptor cells of the human eye (cones) in the presence of certain frequencies of light and noise, and is dependent on the subjective perception of the human brain. Mixing two primary colors gives rise to a secondary color.
+The theories of traditional and modern color disagree on which are the primary colors. The modern color theory distinguishes between light and pigment colors (Figure \ref{fig:mixtureLight},Figure \ref{fig:mixturepigment}). [5]
+
+\begin{itemize}
+	\item Light primary colors (RGB model): Red, green and blue.
+	\item Primary pigment colors (CMY Model): Cyan, magenta and yellow.
+	\item Traditional primary colors (RYB Model): Red, yellow and blue.This model is the precursor CMY model. It is considered obsolete by science and industry.
+ 
+\end{itemize}
+
+It is called secondary when a color is obtained by mixing two primary colors and which in turn is complementary color of a third primary color, which is not involved in its preparation. [5]
+
+\begin{itemize}
+	\item Secondary colors light (RGB model) and Cyan, magenta yellow
+	\item  Secondary colors pigment (CMY Model): Orange, green and violet.
+\end{itemize}
+
+\begin{figure}
+  \includegraphics[width=\linewidth]{images/ch2/mixtureLight.jpg}
+  \caption{Primary and secondary colors of light}
+  \label{fig:mixtureLight}
+\end{figure}
+
+\begin{figure}
+  \includegraphics[width=\linewidth]{images/ch2/mixturepigment.jpg}
+  \caption{Primary and secondary colors of pigments}
+  \label{fig:mixturepigment}
+\end{figure}
+
+
+\subsection{Digital image}
+The term image refers to a two dimensional function of light intensity f (x, y) where x and y denote the spatial coordinates and the value of f at any point (x, y) is proportional to the intensity of the image at that point. A digital image can be written as a matrix whose row and column indices identify a point in the image and whose value coincides with the level of light intensity at that point. Each element of the array corresponds to an element in the image and is called pixel. [4]
+
+\begin{equation}
+	\includegraphics[scale=1]{images/ch2/imageMatrix.jpg}
+\end{equation}
+
+The notation of coordinates widely accepted by most of the books is shown in equation (1) where the image has M rows and N columns determining the origin at the point f (0,0).
+
+Figure \ref{fig:leena} shows four version of the same picture where the difference is the number of pixels in each of them. This means that the pixel is only one division unit without a particular actual size. Only when the image resolution is given, a particular size to the pixel is assigned.
+\begin{figure}
+  \includegraphics[width=\linewidth]{images/ch2/leena.jpg}
+  \caption{Digital Image of "Lenna" with different number of pixels}
+  \label{fig:leena}
+\end{figure}
+
+\subsection{Classification of digital image}
+There are many kind of classification of digital image. A Basic classification should be: bitmap and vector images. [2] Vector images are obtained based on lines, each responding to a mathematical equation. An image of this type is formed by controlled strokes coordinates. Vector graphics have the disadvantage that they do not have the level of detail of bitmaps. The advantage is that you can
+reduce and enlarge without losing quality since the lines are redrawn when resizing.
+Bitmap images were described in point 2.1.2. These kinds of images are used in this project. Figure \ref{fig:vectorAndBitmap} shows differences between bitmap and vector images
+
+\begin{figure}
+  \includegraphics[width=\linewidth]{images/ch2/vectorAndBitmap.jpg}
+  \caption{a) Vector and b) bitmap images}
+  \label{fig:vectorAndBitmap}
+\end{figure}
+
+\subsection{Color spaces}
+Color spaces are a defined range of colors that in combination with
+physical device, it allows representations of color in analog and digital way [7].A color model is an abstract mathematical model describing the way colors can be represented as tuples of numbers [4]
+
+There are many types of model color but only the first 3 are important in this project. [8]
+
+\begin{itemize}
+	\item Grayscale
+	\item RGB
+	\item HSV
+	\item Others: YCbCr, HLS, CMY, etc.
+\end{itemize}
+
+\subsubsection{Grayscale}
+An intensity scale is also known as monochrome or grayscale level and to a digital image is an MxN array of values where each pixel is a single sample containing the information of the image intensity.
+In a grayscale image (figure 7a) each pixel has a brightness value between 0 (black) to 1 (white). Commonly, this mode uses up to 256 shades of gray (8 bits per sampled pixel). Another way of representation is as percentage (figure 7.b) The 3 characteristics that can define a color are hue (color), value (lightness or darkening) and saturation (color purity). Thus the conversion of a color image to a grayscale image is not performed in a unique way, however in its most common approach [8], it is to retain information on the brightness and discard the values of hue and saturation. Assuming the colors red, green and blue are signs of light, the approximation of an image in grayscale from a color image is given by equation (2.3) where 0 is the value of less intensity, referring to the color black and 1 is the value
+of greater brightness or white.
+
+\begin{equation}
+	GRAY = (0.30 \cdot R) + (0.59 \cdot G) + (0.11 \cdot B)
+\end{equation}
+
+\begin{figure}
+	\begin{subfigure}{6cm}
+		\centering    
+    	\includegraphics[width=7cm,height=9cm,keepaspectratio]{images/ch2/grayScaleImage.jpg}
+    \end{subfigure}
+  	\begin{subfigure}{6cm}
+  		\centering
+  		\includegraphics[width=4cm,height=7cm,keepaspectratio]{images/ch2/grayLevelImage.jpg}
+   
+  	\end{subfigure}
+  	\centering\caption{a) Greyscale images y b) Grey levels of greyscale images}
+  	\label{fig:grayScaleImage}
+\end{figure}
+
+\subsubsection{RGB model}
+An RGB image is defined as an array of 3xMxN pixels where each pixel corresponds to the red, green and blue components of a color image. The main purpose of the RGB model is the sensing, representation and display of images in electronic devices such as televisions, computers, cell phones, etc. [4]
+
+The RGB model can be viewed as a stack of 3 scale image intensities to be displayed on a color monitor (which has 3 color inputs, red, green and blue). Colors red, green and blue are known as primary colors, and the combination of these different intensities in colors produces human visible spectrum. Figures 8 and 9 show a 3D representation of the RGB model.
+
+Generally the intensity of each of the components is measured on a scale from 0 to 255 (1 byte per component)
+
+\begin{figure}
+	\centering  
+  	\includegraphics[scale=1]{images/ch2/RGBColorCube.jpg}
+  	\caption{Schematic of the RGB color cube. Points along the main diagonal have gray values, from black at the origin to white at point (1,1,1)}
+  	\label{fig:RGBColorCube}
+\end{figure}
+
+\begin{figure}
+	\centering
+  	\includegraphics[scale=0.8]{images/ch2/RGB24ColorCube.jpg}
+  	\caption{RGB 24-bits color cube}
+  	\label{fig:RGBColorCube}
+\end{figure}
+This model is the most used to display digital images on a screen in the current formats so it is very important in the image processing.
+
+\subsubsection{HSV model}
+The HSV model is based on the human perception of color and describes, according to CIE [quote]:
+\begin{itemize}
+	\item Hue: The "attribute of a visual sensation according to which an area appears to be similar to one of the perceived colors: red, yellow, green, and blue, or to a combination of two of them".
+	\item Saturation: Colorfulness of an area judged in proportion to its brightness.
+\end{itemize}
+The HSV color model is based in the RGB model, but it is a cylindrical coordinate model. It uses the following three components [9]
+
+\begin{itemize}
+	\item H (hue) is usually represented in a circumference, so the degree says the color of that pixel, but it is also used in a percentage way for some applications.
+	\item S (saturation), the representation of this component is the distance from the cylinder axe.
+	\item V (value, also called B, brightness), this is the component used in the transform. Usually, it is represented from 0 to 1 (also in Matlab). If the value is 0, it means that the pixel is black, regardless of the other two components (for this reason, the HSV model can also be interpreted and represented like a cone) (figure \ref{fig:HSVModel}).
+
+\end{itemize}
+
+\begin{figure}
+	\centering
+  	\includegraphics[scale=0.5]{images/ch2/HSVModel.jpg}
+  	\caption{Cone of HSV model}
+  	\label{fig:HSVModel}
+\end{figure}
+
+The transformation from RGB to HSV is given by [9]:
+
+\begin{figure}
+  	\includegraphics[scale=0.4]{images/ch2/H.jpg}
+  	\label{fig:H}
+\end{figure}
+
+\begin{figure}
+  	\includegraphics[scale=0.4]{images/ch2/S.jpg}
+  	\label{fig:S}
+\end{figure}
+
+\begin{equation}
+	V=MAX
+\end{equation}
+
+Hence, the formula indicates that for a pixel, the Value or Brightness is the maximum value of any of the RGB components. For example, if R is 0.7, G is 0.5 and B is 0.1 (normalized), the value for this pixel is 0.7.
+
+\begin{figure}
+	\begin{subfigure}{7cm}  
+    	\includegraphics[width=7cm,height=12cm,keepaspectratio]{images/ch2/image.jpg}
+    \end{subfigure}
+  	\begin{subfigure}{5cm}
+  		\includegraphics[width=7cm,height=12cm,keepaspectratio]{images/ch2/brightness.jpg}
+   
+  	\end{subfigure}
+  	\caption{a) Original picture. b) Component brightness of original picture}
+  	\label{fig:image}
+\end{figure}
+
+
+\subsection{Digital Image processing}
+The digital image processing is the set of techniques applied to digital images in order to improve quality or facilitate the search for information [10].
+
+The field that handles the processing of digital images is the digital image processing. Most processing techniques act treating the image as a two dimensions signal and then applying standard signal processing techniques of one dimension. Among the most common processing
+operations are:
+\subsubsection{Intensity Transformation}
+Exists for the spatial domain techniques that operate directly on the image pixels. The processes discussed in this report are denoted by the expression
+\begin{equation}
+	 g(x,y) = T[f(x,y)]
+\end{equation}
+where the function f(x,y) is the input image, g(x,y) is the output image (processed image) and T is an operator on f, which is an operator defined in a specific neighborhood (x,y) on a point (x,y).
+
+Knowing that the main space to define neighborhoods about some point (x,y) approach is to use a square or rectangular region centered at (x,y) as shown below in the following scheme.
+
+\begin{figure}
+	\centering
+		\includegraphics[scale=1]{images/ch2/spatialDomain.jpg}
+		\caption{Spatial Domain}
+		\label{fig:spatialDomain}
+\end{figure}
+
+The way to do this is to move starting pixel by pixel, that is, starting from the upper left corner as it moves, different neighborhoods are included. The operator T is applied to each location (x,y) thus g output can be obtained at that location. Only the pixels in the neighborhood are used to calculate the value of g(x,y).
+
+Intensity transformation functions; the simplest form of the transformation T is when the neighborhood size is 1x1 (one pixel). In this case, the value of g(x,y) depends only on the intensity at that point f, and T becomes a transformation function intensities or gray Levels. As depend only on the intensity values, and not explicitly on (x,y), these functions are usually written in simplified form as;
+
+\[
+	s=T(r)
+\]
+Where r denotes the intensity of f and s the intensity of g, both on a corresponding point (x,y) of the image [4].
+
+Some of these techniques are;
+
+\begin{itemize}
+	\item Linear
+		\begin{itemize}
+			\item Negative; Invert the order of the intensity values. 
+				\[
+					T(r){=}L-1-r
+				\]
+			\item Brightness; change of the average intensity of the image 
+				\[
+					T(r)=r \pm B 				
+				\]	
+				(B is real number)
+			\item Contrast; change of the dynamic range of the image. 
+				\[
+					T(r)=r \cdot B 
+				\]		
+				(B is real number)
+				\begin{figure}
+					\centering
+					\includegraphics[scale=1]{images/ch2/basicTransformation.jpg}
+					\caption{Basic transformations}
+					\label{fig:basicTransformation}
+				\end{figure}						
+		\end{itemize}
+		\item Nonlinear;
+			\begin{itemize}
+				\item Log; It is used to display low levels of intensity with greater dynamic range.
+					\[
+						T(r)=c log(1+r)
+					\]
+				\item Log power-law; It is similar to the log transformation. The advantage is the variety of  transformations to modify the value of n 
+					\[
+						T(r)=c \thinspace r^n
+					\]									
+				\item Histogram equalization;	
+			\end{itemize}			
+		\item Thresholding;
+			\begin{itemize}
+				\item change a gray scale image in binary image (black and white) through a threshold
+					\[
+						T(r)=
+							\begin{cases}
+								0,&if r \textless T\\
+								255,&if r \textgreater T
+							\end{cases}
+					\]
+			\end{itemize}
+\end{itemize}
+
+\subsubsection{Geometric transformation;}
+Geometric transformation modify the spatial relationship between pixels. In terms of digital image processing a geometric transformation consists of two basic operations [11]:				
+
+\begin{itemize}
+	\item A spatial transformation that defines the relocation of the pixels in the image plane.
+	\item Interpolation of gray levels, which are related to mapping the intensity values of the pixels in the transformed image.
+\end{itemize}
+
+\subsubsection{Transformations into frequency domain}
+\begin{itemize}
+	\item Fourier Transformation
+	\item Filter
+\end{itemize}
+for this project,intensity transformation is used.
+
+
+
+
+
+
+
+
+
+
+
+
+
 The Retinex Image Enhancement Algorithm is an automatic image enhancement method that enhances a digital image in terms of dynamic range compression, colour independence from the spectral distribution of the scene illuminate, and colour/ lightness rendition. There are several retinex based image Enhancement techniques. Some of them are described in this chapter.
 \section{Image Processing}
 Image processing is a method to perform some operations on an image, in order to get an enhanced image or to extract some useful information from it. It is a type of signal processing in which input is an image and output may be image or characteristics/features associated with that image. Nowadays, image processing is among rapidly growing technologies. It forms core research area within engineering and computer science disciplines too. Image processing basically includes the following three steps:

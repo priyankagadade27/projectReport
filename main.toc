@@ -1,0 +1,60 @@
+\select@language {english}
+\contentsline {chapter}{\numberline {1}Introduction}{11}{chapter.1}
+\contentsline {section}{\numberline {1.1}Introduction}{11}{section.1.1}
+\contentsline {section}{\numberline {1.2}Problem Definition}{12}{section.1.2}
+\contentsline {section}{\numberline {1.3}Objective}{12}{section.1.3}
+\contentsline {section}{\numberline {1.4}Scope}{12}{section.1.4}
+\contentsline {section}{\numberline {1.5}Existing System}{13}{section.1.5}
+\contentsline {section}{\numberline {1.6}Outline}{13}{section.1.6}
+\contentsline {chapter}{\numberline {2}Relate d Work}{14}{chapter.2}
+\contentsline {section}{\numberline {2.1}Digital Image Processing}{14}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Light and visible spectrum}{14}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Digital image}{16}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Classification of digital image}{18}{subsection.2.1.3}
+\contentsline {subsection}{\numberline {2.1.4}Color spaces}{18}{subsection.2.1.4}
+\contentsline {subsubsection}{Grayscale}{19}{section*.11}
+\contentsline {subsubsection}{RGB model}{20}{section*.13}
+\contentsline {subsubsection}{HSV model}{22}{section*.16}
+\contentsline {subsection}{\numberline {2.1.5}Digital Image processing}{24}{subsection.2.1.5}
+\contentsline {subsubsection}{Intensity Transformation}{24}{section*.21}
+\contentsline {subsubsection}{Geometric transformation;}{27}{section*.24}
+\contentsline {subsubsection}{Transformations into frequency domain}{27}{section*.25}
+\contentsline {section}{\numberline {2.2}Image Processing}{27}{section.2.2}
+\contentsline {section}{\numberline {2.3}Image Enhancement Techniques}{28}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Spatial Domain Technique}{28}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Frequency Domain Technique}{30}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Comparison between Spatial Domain Technique And Frequency Domain Technique}{32}{subsection.2.3.3}
+\contentsline {section}{\numberline {2.4}BASICS OF RETINEX THEORY}{33}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Overview}{33}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Cone Quanta Catch}{34}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}Mondrian Experiments}{35}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.4}Retinex Mechanism}{36}{subsection.2.4.4}
+\contentsline {subsection}{\numberline {2.4.5}Retinex in Image Processing}{39}{subsection.2.4.5}
+\contentsline {subsection}{\numberline {2.4.6}Retinex in Image Enhancement}{41}{subsection.2.4.6}
+\contentsline {chapter}{\numberline {3}Proposed Work}{44}{chapter.3}
+\contentsline {section}{\numberline {3.1}Introduction}{44}{section.3.1}
+\contentsline {section}{\numberline {3.2}Retinex in Image Processing}{45}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Single Scale Retinex (SSR)}{47}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Multiscale Retinex (MSR)}{48}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Multiscale retinex with Color Restoration algorithm (MSRCR)}{49}{subsection.3.2.3}
+\contentsline {chapter}{\numberline {4}Implementation}{53}{chapter.4}
+\contentsline {section}{\numberline {4.1}Introduction}{53}{section.4.1}
+\contentsline {section}{\numberline {4.2}Problem Definition}{54}{section.4.2}
+\contentsline {section}{\numberline {4.3}Objective}{54}{section.4.3}
+\contentsline {section}{\numberline {4.4}Scope}{54}{section.4.4}
+\contentsline {section}{\numberline {4.5}Existing System}{55}{section.4.5}
+\contentsline {section}{\numberline {4.6}Outline}{55}{section.4.6}
+\contentsline {chapter}{\numberline {5}Result and Discussion}{56}{chapter.5}
+\contentsline {section}{\numberline {5.1}Introduction}{56}{section.5.1}
+\contentsline {section}{\numberline {5.2}Problem Definition}{57}{section.5.2}
+\contentsline {section}{\numberline {5.3}Objective}{57}{section.5.3}
+\contentsline {section}{\numberline {5.4}Scope}{57}{section.5.4}
+\contentsline {section}{\numberline {5.5}Existing System}{58}{section.5.5}
+\contentsline {section}{\numberline {5.6}Outline}{58}{section.5.6}
+\contentsline {chapter}{\numberline {6}Conclusion and Future Scope}{59}{chapter.6}
+\contentsline {section}{\numberline {6.1}Introduction}{59}{section.6.1}
+\contentsline {section}{\numberline {6.2}Problem Definition}{60}{section.6.2}
+\contentsline {section}{\numberline {6.3}Objective}{60}{section.6.3}
+\contentsline {section}{\numberline {6.4}Scope}{60}{section.6.4}
+\contentsline {section}{\numberline {6.5}Existing System}{61}{section.6.5}
+\contentsline {section}{\numberline {6.6}Outline}{61}{section.6.6}
