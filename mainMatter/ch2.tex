@@ -1,7 +1,15 @@
-\chapter{Relate d Work}
-While this effect may be desirable in an artistic setting, it is sometimes necessary to undo this degradation. For example, several laptop vision algorithms have confidence the idea that the input image is strictly the scene radiance, i.e., there’s no disturbance from haze. When this assumption is violated, algorithmic errors can occur. Among current haze removal analysis, haze estimation strategies is divided into two broad classes of either hoping on extra information or employing previous assumption.
+\chapter{Related Work}
+An image is an array, or a matrix, of square pixels (picture elements) arranged in columns and rows .An Image is a 2D function f(x, y) , where x and y are spatial coordinates and amplitude of f at any pair of coordinates (x, y) is called the intensity or gray level of the image.
 
 \section{Digital Image Processing}
+Image processing is a method to perform some operations on an image, in order to get an enhanced image or to extract some useful information from it. It is a type of signal processing in which input is an image and output may be image or characteristics/features associated with that image. Nowadays, image processing is among rapidly growing technologies.
+Image processing basically includes the following three steps:
+\begin{itemize}
+	\item Importing the image via image acquisition tools;
+	\item Analysing and manipulating the image;
+	\item Output in which result can be altered image or report that is based on image analysis.  
+\end{itemize}
+
 \subsection{Light and visible spectrum}
 If a beam of white light passes through a glass prism, the human can see that the beam of light is broken and the six colors of the spectrum appear: red, orange, yellow, green, blue and violet (Figure\ref{fig:colorSpectrum}). This is known as refraction and was discovered by Sir Isaac Newton in 1666. In this way, you can understand that white light, existing everywhere, is composed of a spectrum of colors and collided with a body, it absorbs any of these components and reflects others. The reflected colors are what our eyes can perceive. [4]
 \begin{figure}
@@ -284,49 +292,42 @@ Geometric transformation modify the spatial relationship between pixels. In term
 for this project,intensity transformation is used.
 
 
+\subsection{Image Enhancement}
+The main definition of enhancing is to make something greater in value, desirability or attractiveness. The term of enhancement implies a process to improve the visual quality of the image. Image Enhancement transforms images to provide better representation of the subtle details. The principal objective of enhancement is to process an image so that the result is more suitable than the original image for a specific application. Image enhancement processes consist of a collection of techniques that seek to improve the visual appearance of an image or to convert the image to a form better suited for analysis by a human or a machine. In an image enhancement system, there is no conscious effort to improve the fidelity of a reproduced image with regard to some ideal form of the image, as is done in image restoration.
 
+Actually, there is some evidence to indicate that often a distorted image, for example, an image with amplitude overshoot and undershoot about its object edges, is more subjectively pleasing than a perfectly reproduced original. Enhancement of an image is necessary to improve appearance or to highlight some aspect of the image is converted from one into another acquired, scanned, transmitted, copied or printed many types of noise can be present in the image. Image enhancement has come to specifically mean a process of smothering irregularities or noise that has somehow corrupted the image. The term “image enhancement” has been widely used in the past to describe any operation that improves image quality by some criteria. However, in the recent years the meaning of the term has evolved to denote image-preserving noise smoothing.
 
-
-
-
-
-
-
-
-
-
-The Retinex Image Enhancement Algorithm is an automatic image enhancement method that enhances a digital image in terms of dynamic range compression, colour independence from the spectral distribution of the scene illuminate, and colour/ lightness rendition. There are several retinex based image Enhancement techniques. Some of them are described in this chapter.
-\section{Image Processing}
-Image processing is a method to perform some operations on an image, in order to get an enhanced image or to extract some useful information from it. It is a type of signal processing in which input is an image and output may be image or characteristics/features associated with that image. Nowadays, image processing is among rapidly growing technologies. It forms core research area within engineering and computer science disciplines too. Image processing basically includes the following three steps:
-	\begin{itemize}
-		\item Importing the image via image acquisition tools;
-		\item Analysing and manipulating the image;
-		\item Output in which result can be altered image or report that is based on image  		analysis.
-	\end{itemize}
-	
-There are two types of methods used for image processing namely, analogue and digital image processing. Analogue image processing can be used for the hard copies like printouts and photographs. Image analysts use various fundamentals of interpretation while using these visual techniques. Digital image processing techniques help in manipulation of the digital images by using computers. The three general phases that all types of data have to undergo while using digital technique are pre-processing, enhancement, and display, information extraction[9]. In this project, we are working on the enhancement phase. Thus the following section focuses on the study of image enhancement.
-
-
-\section{Image Enhancement Techniques}
-Image enhancement techniques can be divided into two main categories:
+This primarily serves to distinguish it from similar-sounding terms, such as image restoration and image reconstruction, which also taking specific meaning. Image enhancement has played and will continue to play an important role into different fields such as medical, industrial, military and scientific applications. In addition to these applications, image enhancement is increasingly being used in consumer electronics. Internet Web users, for instance, not only rely on built-in image processing protocols such as JPEG (Joint Photographic Expert Group) and interpolation, but they also have become image processing users equipped with powerful yet inexpensive software such as Photoshop. Users not only retrieve digital images from the Web but they are now able to acquire their own by use of digital cameras or through digitization services. Image enhancement is an indispensable tool for researchers in a wide variety of fields:
 \begin{itemize}
-	\item Spatial Domain Method
-	\item Frequency Domain Method
-\end{itemize}
-Spatial domain method directly deals with the pixel values of an image. Whereas Frequency domain method operates on Fourier transform of an image for enhancement of an image.
-
-
-\subsection{Spatial Domain Technique}
-The Spatial domain method is directly operated on pixels of an image. The pixel values are modified based on the problem domain. The objective of this method is to improve the perceptibility of information contained in an image and also enhancing the structural features can improve perceived image quality [10]. Spatial domain methods directly manipulate the image data array, either by point processing or area processing. Basically it deals with spatial frequency, i.e. difference between the highest and the lowest values of a contiguous set of pixels [11]. The technique regarding image enhancement using spatial domain methods can be divide into two categories -
-	\begin{itemize}
-		\item Global Image Enhancement
-		\item Local Image Enhancement
+	\item In forensics, image enhancement is used for identification, evidence gathering and surveillance. Images obtained from fingerprint detection, security videos analysis and crime scene investigations are enhanced to help in identification of culprits and protection of victims.
+	\item In atmospheric sciences IE is used to reduce the effects of haze, fog, mist and turbulent weather for meteorological observations. It helps in detecting shape and structure of remote objects in environment sensing. Satellite images undergo image restoration and enhancement to remove noise.
+	\item Astrophotography faces challenges due to light and noise pollution that can be minimized by IE. For real time sharpening and contrast enhancement several cameras have in-built IE functions. Moreover, numerous softwares allow editing such images to provide better and bright results.
+	\item In oceanography the study of images reveals interesting features of water flow, remains concentration, geomorphology and bathymetric patterns to name a few. These features are more clearly observable in images that are digitally enhanced to overcome the problem of moving targets, deficiency of light and obscure surroundings.
+	\item IE techniques when applied to pictures and videos help the visually impaired in reading small print, using computers and television and face recognition. Several studies have been conducted that highlight the need and value of using IE for the visually impaired.
+	\item The technique of image enhancement is often employed by virtual restoration of historic paintings and artifacts in order to reduce stains and crevices. Color contrast enhancement, sharpening and brightening are just some of the techniques used to make the images bright. IE is a powerful tool for restorers who can inform decisions by viewing the results of restoring a painting beforehand. It is evenly useful in discerning text from worn-out historic documents.
+	\item In the field of e-learning, IE is used to clarify the contents of chalkboard as viewed on streamed video; it improves the content readability and helps students to focus on the text.Similarly, collaboration through the whiteboard is facilitated by enhancing the shared data and diminishing artifacts like shadows and blemishes.
+	\item Medical imaging uses IE techniques for reducing noise and sharpening details to improve the visual representation of the image. Since minute details play a critical role in diagnosis and treatment of disease, it is essential to highlight important features while displaying medical images. This makes IE a necessary aiding tool for viewing anatomic areas in MRI, ultrasound and x-rays to name a few.
+	\item Numerous other fields including law enforcement, microbiology, biomedicine, bacteriology, climatology, meteorology, etc., benefit from various IE techniques. These benefits are not limited to professional studies and businesses but extend to the common users who employ IE to cosmetically enhance and correct their images.
 	
-	\end{itemize}
-Global methods are mainly histogram modification that aims to exploit the full dynamic range of a rendering device by modifying the histogram of an image. The attractiveness is their simplicity and minor computational effort. However it is often necessary to enhance detail over a smaller area. So, the local image enhancement method plays a major role in those applications [11].\par 
-Image processing is defined as the process of analysing and manipulating images using a computer. Using computer algorithms to perform image processing on digital images is referred as Digital image processing. Image Enhancement is simple and most appealing areas among all the digital image processing techniques. Image enhancement is to improve the image quality so that the resultant image is better than the original image for a specific application. Hence Image Enhancement is a “subjective process” which means that the human perception decides the best method from the obtained results. As we know that frequency domain methods first transform the images into transform domain or frequency domain and then operate on the transformed images. After the process, the images are transformed back to spatial domain by applying inverse transforms.[12]
-There are many spatial domain techniques that are divided according to global or local image enhancement. Histogram Equalization is global image enhancement which is one of the simplest and widely used techniques. Histogram equalization is the technique by which the dynamic range of the histogram of an image is increased. It assigns the intensity values of pixels in the input image such that the output image contains a uniform distribution of intensities. It improves contrast and the goal of histogram equalization is to obtain a uniform histogram [14]. In HE, the cumulative density function (cdf) of the histogram is used as the intensity transfer function; this method enhances the contrast by distributing the cdf across the entire dynamic range. However, this even distribution creates artefacts’ in the smooth regions of the image. Moreover, it does not consider the boundaries, which degrades the sharpness of the resulting image [15].
-When the original histogram does not occupy the entire dynamic range of the image, HE produces washout effect which is the disadvantage of HE. Thus there are several techniques which based on HE has been proposed to overcome the disadvantages of original technique. One of the techniques is Adaptive Histogram Equalization. Adaptive histogram Equalization is local image enhancement. This is an extension to traditional Histogram Equalization technique. It enhances the contrast of images by transforming the values in the intensity image Unlike HE it operates on small data regions (tiles), rather than the entire image. Each tile's contrast is enhanced, so that the histogram of the output region approximately matches the specified histogram. The neighbouring tiles are then combined using bilinear interpolation in order to eliminate artificially induced boundaries [14]. In AHE, histogram of image is divided into many modified to match across boundaries. It produces good result in dark images. The contrast, especially in homogeneous areas, can be limited in order to avoid amplifying the noise which might be present in the image. There are some other technique which based on spatial domain methods such as Bi-histogram equalization and Laplacian. BHE splits the histogram into two parts based on where the mean lies. Each part is then enhanced independently using HE. BHE maintains the intensity mean of the original image, which suppresses the over enhancement problem. Unnatural images are, however, still produced [13]. Laplacian is used to enhance the edges of an image thus it is edge enhancing algorithm. It perform local enhancement of the brightness levels of image pixels. Therefore the resultant image has increase in local contrast at boundaries rectangular domains, and then each domain is passed through the histogram equalization. Once this is completed the brightness levels are enhanced.  Table 2.1 shows the summary of spatial techniques[28].
+\end{itemize}
+
+The following image(figure \ref{fig:imageEnhancementTechniques} explains the different types of image enhancement techniques.
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.7]{images/ch2/imageEnhancementTechniques.jpg}
+	\caption{Image enhancement techniques}
+	\label{fig:imageEnhancementTechniques}
+\end{figure}
+
+In this project, spatial domain is considered.
+
+
+
+
+
+
+
 
 \begin{table}[h!]
 	\begin{center}

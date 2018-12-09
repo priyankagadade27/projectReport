@@ -1,21 +1,29 @@
 \select@language {english}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Color spectrum seen by passing White light through a prism\relax }}{15}{figure.caption.5}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Wavelengths comprising the visible range of the electromagnetic spectrum\relax }}{15}{figure.caption.6}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Primary and secondary colors of light\relax }}{16}{figure.caption.7}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Primary and secondary colors of pigments\relax }}{17}{figure.caption.8}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Digital Image of "Lenna" with different number of pixels\relax }}{18}{figure.caption.9}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces a) Vector and b) bitmap images\relax }}{19}{figure.caption.10}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces a) Greyscale images y b) Grey levels of greyscale images\relax }}{20}{figure.caption.12}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Schematic of the RGB color cube. Points along the main diagonal have gray values, from black at the origin to white at point (1,1,1)\relax }}{21}{figure.caption.14}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces RGB 24-bits color cube\relax }}{21}{figure.caption.15}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Cone of HSV model\relax }}{23}{figure.caption.17}
-\contentsline {figure}{\numberline {2.11}{\ignorespaces a) Original picture. b) Component brightness of original picture\relax }}{23}{figure.caption.20}
-\contentsline {figure}{\numberline {2.12}{\ignorespaces Spatial Domain\relax }}{25}{figure.caption.22}
-\contentsline {figure}{\numberline {2.13}{\ignorespaces Basic transformations\relax }}{26}{figure.caption.23}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Color spectrum seen by passing White light through a prism\relax }}{16}{figure.caption.5}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Wavelengths comprising the visible range of the electromagnetic spectrum\relax }}{16}{figure.caption.6}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Primary and secondary colors of light\relax }}{18}{figure.caption.7}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Primary and secondary colors of pigments\relax }}{18}{figure.caption.8}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Digital Image of "Lenna" with different number of pixels\relax }}{19}{figure.caption.9}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces a) Vector and b) bitmap images\relax }}{20}{figure.caption.10}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces a) Greyscale images y b) Grey levels of greyscale images\relax }}{21}{figure.caption.12}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Schematic of the RGB color cube. Points along the main diagonal have gray values, from black at the origin to white at point (1,1,1)\relax }}{22}{figure.caption.14}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces RGB 24-bits color cube\relax }}{23}{figure.caption.15}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Cone of HSV model\relax }}{24}{figure.caption.17}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces a) Original picture. b) Component brightness of original picture\relax }}{24}{figure.caption.20}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Spatial Domain\relax }}{26}{figure.caption.22}
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Basic transformations\relax }}{27}{figure.caption.23}
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Image enhancement techniques\relax }}{31}{figure.caption.26}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Result of Retinex Model\relax }}{52}{figure.caption.29}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Result of Retinex Model\relax }}{53}{figure.caption.30}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Plot of power law transformation for various $\gamma $ with input gray level along $X$ axis and output gray level along $Y$ axis.\relax }}{54}{figure.caption.31}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Seed Image and its histogram\relax }}{55}{figure.caption.32}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Block diagram showing the implementation of Method 1\relax }}{57}{figure.caption.33}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Bilinear interpolation to eliminate region boundaries[From Zuiderveld, 1994].\relax }}{60}{figure.caption.34}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Principle of contrast limiting as used in CLAHE. (a) Histogram of a contextual region containing many background pixels. (b) Calculated cumulative histogram. (c) Clipped histogram with excess pixels redistributed throughout the histogram. (d) Cumulative clipped histogram with maximum slope set to the clip limit [From Zuiderveld, 1994].\relax }}{61}{figure.caption.35}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces a) Input Image b)Enhanced Image using SSR\relax }}{66}{figure.caption.36}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces a) Input Image b)Enhanced Image using SSR\relax }}{66}{figure.caption.37}
 \addvspace {10\p@ }

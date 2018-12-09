@@ -1,30 +1,77 @@
 \chapter{Implementation}
-Retinex Theory was formulated by Edwin H. Land In 1964. His theory and an extension, the “reset Retinex” were further formalized by Land and Mc Cann [1]. It was the first attempt to simulate and explain the human visual system how it perceives colours, based on experiments using Mondrian patterns [3].
-\section{Introduction}
-Besides digital photography, retinex algorithms are used to make the information in astronomical photos visible and detect, in medicine, poorly visible structures in X-rays or scanners. In brief it helps to achieve many features such as sharpening, colour constancy processing and dynamic range compression [5]. The Retinex Image Enhancement Algorithm is an automatic image enhancement method that enhances a digital image in terms of dynamic range compression, colour independence from the spectral distribution of the scene illuminate, and colour/ lightness rendition. The digital image enhanced by the Retinex Image Enhancement Algorithm is much closer to the scene perceived by the human visual system, under all kinds and levels of lighting variations, than the digital image enhanced by any other method [6]. Image enhancement technology has permeated in many areas of science, engineering and civilian, such as biomedicine images, astrophotography, satellite pictures, computer vision, surveillance systems, civilian cameras, etc.[7]
+The uneven illumination, particularly high dynamic lighting environment, causes many problems.
+For example, the images acquired by digital cameras, camcorders, or other terminals tend to be too
+bright or dark in certain areas, the target is difficult to be identified and some other issues. 
 
-\section{Problem Definition}
-Our system will enhance the input image by applying retinex algorithms: Multi-Scale Retinex with color Restoration (MSRCR), Multi-scale Retinex with Chromaticity Preservation (MSRCP) and Automated Multi-Scale Retinex with Color Restoration (AMSRCR). Thus, the Problem definition can be proposed as follows: To implement the Algorithms: MSRCR, MSRCP and AMSRCR. Also, these algorithms require implementation of Single-Scale Retinex (SSR) algorithm and the SimplestColorBalance algorithm [35].
-\section{Objective}
-	\begin{itemize}
-		\item To implement Single-Scale Retinex and Color Restoration Algorithms.
-		\item To implement Multi-Scale Retinex with Color Restoration using above 
-		algorithms (MSRCR).
-		\item To implement Multi-Scale retinex with Chromaticity preservation- MSRCP.(a 
-		modified version of above algorithm).
-		\item To implement Automated Multi-Scale Retinex with Color Restoration algorithm.	
-		(An automated (image independent) approach to MSRCR)- AMSRCR.
-	\end{itemize}
-	
-\section{Scope}
-The Retinex Image Enhancement Algorithm is an automatic image enhancement method that enhances a digital image in terms of dynamic range compression, colour independence from the spectral distribution of the scene illuminate, and colour/ lightness rendition. So, the scope of this project is to implement the Retinex based image Enhancement Algorithms, which involves the implementation of following three models of retinex algorithms:
-	\begin{itemize}
-		\item Multi-Scale Retinex algorithm with color Restoration (MSRCR)
-		\item Multi-Scale Retinex algorithm with Chromaticity Preservation (MSRCP)
-		\item Automated Multi-Scale Retinex algorithm with Color Restoration (AMSRCR)
+To solve the problems for the quality of image acquisition caused by uneven illumination, a
+series of methods had been put forward successively, including histogram equalization, image
+enhancement in gradient field, homomorphic filter and the Retinex theory. Among these methods,
+the Retinex has become a research hotspot recently as it could achieve a good balance in dynamic
+range compression, edge enhancement and color constancy [1]. There are three classical algorithms
+based on the Retinex theory, they are SSR (Single Scale Retinex), MSR (Single Scale Retinex) and
+MSRCR (Multi-Scale Retinex with Color Restoration). However, SSR could only choose one
+dimension, it was difficult to simultaneously ensure the dynamic range compression and color
+fidelity [1, 2]. Although MSR can ensure the dynamic range compression and color fidelity, it could
+not achieve the high color fidelity, as it simply weighted the different scales linearly [3]. While
+MSRCR could achieve color fidelity much further, it was not conducive to real-time applications,
+because a lot of parameters needed to be set [4]. Furthermore, the above three algorithms may
+produce halo and color distortion in high contrast regions [5], since the illuminant image was
+obtained by Gaussian low-filter. 
+In order to overcome such problems as halo and color distortion for the traditional Retinex, many
+improved algorithms have been proposed. For example, the halo was reduced through bilateral filter
+to obtain the illuminant image, but due to being ignorant of the correlations between each channel
+of the color image, it could not decrease the color distortion [6]. Based on this, some researchers
+combined the Weber’s law converted the image into HSV space, which realized the reduction of
+4th International Conference on Mechatronics, Materials, Chemistry and Computer Engineering (ICMMCCE 2015) © 2015. The authors - Published by Atlantis Press 2218
+both halo and color distortion. However, it was not conducive to real-time application, as a lot of
+parameters needed to be set [7].
 
-	\end{itemize}
-\section{Existing System}
-The existing image enhancement techniques like auto gain/offset, gamma correction, histogram equalization and homomorphic filtering heavily depend on input images. For auto gain/offset, it could achieve dynamic range compression but at the loss of details due to saturation and clipping. For gamma correction, it is good to improve pictures either too dark or too bright but it is a global function applied to the picture, thus there is no enhancement involved. For histogram equalization and homomorphic filtering, they all failed for bi-modal pictures, which include both dark and bright areas. But for retinex, it could achieve satisfactory results for both pictures, thus its benefits are obviously to see.[8]
-\section{Outline}
-This project report is organized into six chapters: Chapter 1 introduces the project; chapter 2 describes related work and reviews previous works; Chapter 3 presents the technology that will be used. Chapter 4 presents the system analysis and design in detail, chapter 5 presents the results and Chapter 6 is the Conclusion.
+To further reduce halo and color distortion, this paper has proposed an improved Retinex image
+enhancement algorithm based on bilateral filter. And the results demonstrated that it could suppress
+both the halo and color distortion effectively. 
+
+\section{Retinex theory and its typical algorithms }
+Retinex (abbreviation of Retina and Cortex) theory is a model been used to explain how the
+human visual system perceive color and brightness of objects. It is also the interpretation of
+color constancy indicating the color of the same objects is constant, though they are under different
+lighting. Briefly, the basic principle of Retinex theory is that the original image can be divided into
+illuminant and reflected image, and the enhancement can be achieved through reducing the effects
+of illuminant image on the reflected. As shown as in formula \eqref{fig:illumination} 
+
+\begin{equation}
+	S(x,y)=R(x,y)*L(x,y)
+	\label{fig:illumination}
+\end{equation}
+
+Where $L(x,y)$ represents incident light or illuminant image deciding the dynamic range
+achieved by image pixels $R(x,y)$ represents reflective properties or reflected light deciding the
+interior properties of image $S(x,y)$ represents the original image. And the visual effects can be
+improved, mainly by obtaining the reflective properties or reflected image. 
+
+\subsection{Single Scale Retinex(SSR)}
+The SSR algorithm based on center/surround Retinex approved by Edwin Land is firstly
+improved and realized by Jobson and his colleagues [10]. And the illuminant image is also obtained
+by Gaussian low filter as in formula \eqref{fig:ssr}
+\begin{equation}
+	R_{SSR}(x,y)=\log S(x,y) - \log (S(x,y) \otimes F(x,y))
+	\label{fig:ssr}
+\end{equation}
+
+Where the symbol $\otimes$ represents convolution operation. $F(x, y)$ is Gaussian surrounding
+function in the following formula
+\begin{equation}
+	F(x,y)= \gamma \; exp(- \frac{(x^{2}+y^{2})}{\sigma^{2}}
+	\label{fig:ssr1}
+\end{equation}
+
+\begin{equation}
+	\iint F(x,y)dxdy = 1
+	\label{fig:ssr2}
+\end{equation}
+
+
+Where $\gamma$ is a normalization constant, $\sigma$ is the scale of surrounding function, and the smaller $\sigma$ is, the more contrast is enhanced, but the more distinct the halo phenomenon becomes.
+Conversely, the larger $\sigma$ is, although the less contrast is enhanced, the more effectively the halo is suppressed. Large numbers of experiments indicate that, if $\sigma$ is between 80 and 100, the balance can be maintained.
+
+
+

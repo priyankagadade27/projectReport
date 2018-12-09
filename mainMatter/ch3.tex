@@ -26,7 +26,7 @@ The basics of SSR include a logarithmic photoreceptor function that approximates
 \begin{equation}
 	R_{i}(x,y)=\log_{i}-\log[F(x,y)\*I_{i}(x,y)]
 \end{equation}
-where Ii (x,y) is image distribution in the ith color band,F(x,y) is the normalized surround function[7] such that:
+where $I_{i} (x,y)$ is image distribution in the ith color band,$F(x,y)$ is the normalized surround function[7] such that:
 
 \begin{equation}
 	\iint F(x,y)dxdy=1
@@ -248,8 +248,260 @@ color constancy.
 	\caption{Result of Retinex Model}
 \end{figure}
 
+\section{Power Law Transformation}
+Image enhancement can be carried out in the spatial or the Fourier domains and one of the important
+parameters to be looked at in this context is contrast enhancement. In the spatial domain,
+the methods used may be further classified into: gray level transformations, histogram processing,
+etc. As mentioned above, histogram equalization suffers from the fact that it may sometimes
+decrease the contrast. Histogram specification or matching can be tailor-made to suit the images
+but requires lot of user input. Similarly, power law transformations or piece-wise linear transformation
+functions also require lot of user input. In the former case one has to choose the exponent
+appearing in the transformation function, while in the latter case one has to choose the slopes
+and ranges of the straight lines which form the transformation function.
 
+The power-law transformation is usually defined as
 
+\begin{equation}
+	s=c \thinspace r^\gamma
+\end{equation}
+where $s$ and $r$ are the gray levels of the pixels in the output and the input images, respectively and
+$c$ is a constant. These power law transformation functions are shown graphically in the diagram
+(figure \ref{fig:powerLawTransformation}).
+Figure \ref{fig:powerLawTransformation} shows the plot of power law transformation with the input gray level $r$ along the $x$ axis and the output gray level $s$ on the $y$ axis for various values of $\gamma$ .
+We will now consider that these transformations are applied on a low contrast image. We
+assume that the background and foreground peaks have almost merged together in such a low
+contrast image. Let $r_{max}$ be the dominant peak in the histogram. If $r_{max}$ has a large value (in the
+range $150\textrm{--}255$), then it is seen from the above graph that contrast stretching occurs by choosing
+$\gamma \textgreater 1$ whereas for dark images ($r_{max}$ lies in the range $0\textrm{--}100$), we see that choosing $\gamma \textless 1$ leads
+to contrast stretching. We can of course, automate this procedure for choosing the appropriate
+exponent, by finding out the peak value in the histogram. However, we can further generalize
+this procedure so that the most appropriate value of the exponent is chosen.
 
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.9]{images/ch3/powerLawTransformation.jpg}
+	\caption{Plot of power law transformation for various $\gamma$ with input gray level along $X$ axis and output
+gray level along $Y$ axis.}
+	\label{fig:powerLawTransformation}
+\end{figure}
 
+\section{Histogram Equalization}
+An image histogram is a type of histogram that acts as a graphical representation of
+the tonal distribution in a digital image. It plots the number of pixels for each tonal
+value. A histogram is a representation of a frequency distribution. The histogram
+of a digital image with $G$ total possible intensity levels in the $[0,G − 1]$ is defined
+as the discrete function:
+
+\begin{equation}
+	p(\gamma_{k})=\frac{n_{k}}{n}
+\end{equation}
+
+Where $\gamma_{k}$ is the intensity level in the original raw image $n_{k}$ is the number of
+pixels in the image whose intensity level is n is the total no of pixels.
+
+Histogram equalization is used to enhance the contrast of the image, it spreads the
+intensity values over full range. Histogram equalization technique can’t be used for
+images suffering from non-uniform illumination in their backgrounds as this process
+only adds extra pixels to the light regions of the image and removes extra pixels from
+dark regions of the image resulting in a high dynamic range in the output image.The
+goal of histogram equalization is to spread out the contrast of a given image evenly
+throughout the entire available dynamic range.
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=1]{images/ch3/histogramEqualization.jpg}
+	\caption{Seed Image and its histogram}
+	\label{fig:histogramEqualization}
+\end{figure}
+
+In histogram equalization technique, it is the probability density function (pdf)
+that is being manipulated. To make it simple, what histogram equalization technique
+does is that, it changes the pdf of a given image into that of a uniform probability
+density function that spreads out from the lowest pixel value ($0$ in this case) to
+the highest pixel value $(L − 1)$ . This can be achieved quite easily if the pdf is a
+continuous function. However, since we are dealing with a digital image, the pdf
+will be a discrete function. Lets suppose we have an image $x$ , and let the dynamic
+range for the intensity $\gamma_{k}$ varies from $0$ (black) to $L1$ (white). This pdf can be
+approximated using the probability based on the histogram $p(\gamma_{k})$ as follow:
+
+\begin{equation}
+	pdf(x)=p(\gamma_{k})= \frac{total\;pixels\;with\;intensity\; \gamma_{k}}{total\;pixels\;I\;image\;x}
+\end{equation}
+
+From this pdf, we can then obtain the cumulative density function (cdf) as follows:
+
+\begin{equation}
+	cdf(x)=\sum_{k=0}^{L-1}p(\gamma_{k})
+\end{equation}
+
+Where $p(\gamma_{k})$ is the probability for pixel of intensity. The output of a pixel from
+the histogram equalization operation is then equal to the cdf of the image or mathematically :
+
+\begin{equation}
+	p(s_{k})=\sum_{k=0}^{L-1}p(\gamma_{k})
+\end{equation}
+
+To get the value of the pixel, $p(s_{k})$ needs to be multiplied by $L1$ and then round
+it to the nearest integer
+
+\subsection{Equalization on Color Image}
+\begin{itemize}
+	\item \textbf{Equalize R, G, B components independently (method1)}\\
+			This scheme is one of the mostly used methods for color image processing.
+			Each channels of RGB space are processed using Histogram Equalization
+			independently[2].After the Equalize the R,G,B components we concate all the three
+			components and get the better image compare to input image.
+
+			\begin{figure}
+				\centering
+				\includegraphics[scale=1]{images/ch3/method1.jpg}
+				\caption{Block diagram showing the implementation of Method 1}
+				\label{method1}
+			\end{figure}
+	\item \textbf{Equalize tha V Component from HSV Color Space (method 2)}\\
+			In order to process color image in RGB color space using this scheme, image first
+			must be transformed to hue, saturation and luminance (HSV) color space.Here	
+			Brightness is a synonym of intensity. Hue represents the impression related to the
+			dominant wavelength of the color stimulus Saturation shows the relative color purity
+			(amount of white light in the color).
+			Hue and Saturation taken together are called the chromaticity coordinates (polar
+			system).
+			In this method we apply the Histogram Equalization on V component on HSV
+			color space .After the Equalize the V we combine the V with H and S .Then we get
+			the better image compare to input image.\\
+			$HSV \rightarrow H, S, V$\\
+			$V \rightarrow V(equalize)$\\
+			$HSV(equalize) \rightarrow H, S, V(equalize)$\\
+	\item \textbf{Equalize the Y Component from YIQ Color Space(method 3)}\\
+			In order to process color image in RGB color space using this scheme, the image
+			first must be transformed to YIQ color space[4][5].\\
+			Here\\
+			The Y component represents the luma information, and is the only component used
+			by black-and-white television receivers.\\
+			I stands for in-phase\\
+			Q stands for quadrature\\
+			I and Q represent the chrominance information.\\
+
+			In this method we apply the Histogram Equalization on Y component on YIQ
+			color space .After the Equalize the Y we combine the Y with I and Q .Then we get the better image compare to 				input image.\\
+			$YIQ \rightarrow YIQ$\\
+			$Y \rightarrow Y(equalize)$\\
+			$YIQ(equalixe) \rightarrow Y, I, Q(equalize)$\\
+\end{itemize}
+
+\section{Adaptive Histogram Equalization(AHE) method}
+This is an extension to traditional Histogram Equalization
+technique. It enhances the contrast of images by transforming
+the values in the intensity image I. Unlike HISTEQ, it operates
+on small data regions (tiles), rather than the entire image. Each
+tile's contrast is enhanced, so that the histogram of the output
+region approximately matches the specified histogram. The
+neighboring tiles are then combined using bilinear interpolation
+in order to eliminate artificially induced boundaries.
+The contrast, especially in homogeneous areas, can be limited
+in order to avoid amplifying the noise which might be present
+in the image.
+\begin{itemize}
+	\item Algorithm Steps:
+	\begin{enumerate}
+		\item Obtain all the inputs: Image, Number of regions in row and column directions, Number of bins for the 	
+		histograms used in building image transform function (dynamic range), Clip limit for contrast limiting (normalized 	
+		from 0 to 1)
+		\item Pre-process the inputs: Determine real clip limit from the normalized value if necessary, pad the image 
+		before splitting it into regions
+		\item Process each contextual region (tile) thus producing gray level mappings: Extract a single image region, make 
+		a histogram for this region using the specified number of bins, clip the histogram using clip limit, create a 
+		mapping (transformation function) for this region.
+		\item Interpolate gray level mappings in order to assemble final CLAHE image: Extract cluster of four neighbouring 
+		mapping functions, process image region partly overlapping each of the mapping tiles, extract a single pixel, apply
+		four mappings to that pixel, and interpolate between the results to obtain the output pixel; repeat over the entire 
+		image.
+	\end{enumerate}
+\end{itemize}
+
+In low contrast images, the features of interest may occupy only a
+relatively narrow range of gray scale, with the majority of gray levels occupied by
+“uninteresting areas” such as background and noise. These “uninteresting areas”
+may also generate large counts of pixels and hence, large peaks in the
+histogram. In this case, the global histogram equalization amplifies the image
+noise and increases visual graininess or patchiness. The global histogram
+equalization technique does not adapt to local contrast requirements, and minor
+contrast differences can be entirely missed when the number of pixels falling in a
+particular gray range is small.
+
+Adaptive Histogram Equalization (AHE) is a modified histogram
+equalization procedure that optimizes contrast enhancement based on local
+image data. The basic idea behind the scheme is to divide the image into a grid
+of rectangular contextual regions, and to apply a standard histogram equalization
+in each. The optimal number of contextual regions and the size of the regions
+depend on the type of input image, and the most commonly used region size is
+8x8 (pixels). In addition, a bi-linear interpolation scheme is used to avoid
+discontinuity issues at the region boundaries.
+
+Figure \ref{fig:bilinearInterpolation} illustrates the application of the interpolation scheme at the
+boundaries. Gray level assignment at the sample positions indicated by the white
+dot are derived from gray-value distributions in the surrounding contextual regions. The points A, B, C, and D are the centers of the surrounding contextual
+regions; region-specific gray level mappings (gA(s), gB(s), gC(s) and gD(s)) are
+based on the histogram equalization of the pixels contained. Thus, assuming that
+the original pixel intensity at the sample point is s, its new gray value s’ is
+calculated by bilinear interpolation of the gray-level mappings that were
+calculated for each of the surrounding contextual regions:
+
+\begin{equation}
+	s'=(1-y)((1-x)g_{A}(s) + xg_{B}(s))+y(((1-x)g_{c}(s)+xg_{D}(s))
+\end{equation}
+
+where x and y are normalized distances with respect to the point A. This
+gray level interpolation is repeated over the entire image
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.7]{images/ch3/bilinearInterpolation.jpg}
+	\caption{Bilinear interpolation to eliminate region boundaries[From Zuiderveld, 1994].}
+	\label{fig:bilinearInterpolation}
+\end{figure}
+
+AHE is able to overcome the limitations of the standard equalization
+method as discussed earlier, and achieves a better presentation of information
+present in the image. However, AHE is unable to distinguish between noise and
+features in the local contextual regions. Hence, background noise is amplified in
+“flat” or “featureless” regions of the image, which is a major drawback of the
+method.
+
+\subsection{Contrast Limited Adaptive Histogram Equalization (CLAHE)}
+The noise problem associated with AHE can be reduced by limiting
+contrast enhancement specifically in homogeneous areas. These areas can be
+characterized by a high peak in the histogram associated with the contextual
+regions since many pixels fall inside the same gray level range. The Contrast
+Limited Adaptive Histogram Equalization (CLAHE) limits the slope associated
+with the gray level assignment scheme to prevent saturation, as illustrated in
+Figure \ref{CLAHE}. This process is accomplished by allowing only a maximum number of
+pixels in each of the bins associated with the local histograms. After “clipping” the
+histogram, the clipped pixels are equally redistributed over the whole histogram
+to keep the total histogram count identical
+\begin{figure}
+	\centering
+	\includegraphics[scale=1]{images/ch3/CLAHE.jpg}
+	\caption{Principle of contrast limiting as used in CLAHE. (a)
+Histogram of a contextual region containing many background pixels.
+(b) Calculated cumulative histogram. (c) Clipped histogram with excess
+pixels redistributed throughout the histogram. (d) Cumulative clipped
+histogram with maximum slope set to the clip limit [From Zuiderveld,
+1994].}
+\label{CLAHE}
+\end{figure}
+
+The clip limit is defined as a multiple of the average histogram contents
+and is actually a contrast factor. Setting a very high clip limit basically limits the clipping and the process becomes a standard AHE technique. A clip or contrast
+factor of one prohibits any contrast enhancement, preserving the original image.
+The main advantages of the CLAHE transform are its modest
+computational requirements, ease of use and excellent results on most images. The CLAHE image has less amplified noise and avoids the brightness saturation in the standard histogram equalization.
+
+CLAHE does have its limitations. Since the method is aimed at optimizing
+contrast, there no direct 1-to-1 relationship between the gray values of the
+original image and the CLAHE processed result. Pixels of the same gray level in
+the original image may be mapped to different gray levels in the output image,
+because of the equalization process and bilinear interpolation. Consequently,
+CLAHE images are not suited for quantitative measurements that rely on
+physical meaning of image intensity [Zuiderveld, 1994].
 
