@@ -48,10 +48,4 @@
 \contentsline {section}{\numberline {5.2}Power Law Transformation}{72}{section.5.2}
 \contentsline {section}{\numberline {5.3}Histogram Equalization}{73}{section.5.3}
 \contentsline {section}{\numberline {5.4}Adaptive Histogram Equalization}{75}{section.5.4}
-\contentsline {chapter}{\numberline {6}Conclusion and Future Scope}{79}{chapter.6}
-\contentsline {section}{\numberline {6.1}Introduction}{79}{section.6.1}
-\contentsline {section}{\numberline {6.2}Problem Definition}{80}{section.6.2}
-\contentsline {section}{\numberline {6.3}Objective}{80}{section.6.3}
-\contentsline {section}{\numberline {6.4}Scope}{80}{section.6.4}
-\contentsline {section}{\numberline {6.5}Existing System}{81}{section.6.5}
-\contentsline {section}{\numberline {6.6}Outline}{81}{section.6.6}
+\contentsline {chapter}{\numberline {6}Conclusion}{79}{chapter.6}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.11.26)  12 DEC 2018 00:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.11.26)  17 DEC 2018 08:23
 entering extended mode
 **./main.tex
 (main.tex
@@ -879,7 +879,7 @@ Package caption Info: End \AtBeginDocument code.
 \openout2 = `frontMatter/frontPage.aux'.
 
  (frontMatter/frontPage.tex
-<logo.jpg, id=203, 264.23718pt x 258.21469pt>
+<logo.jpg, id=179, 264.23718pt x 258.21469pt>
 File: logo.jpg Graphic file (type jpg)
 <use logo.jpg>
 Package pdftex.def Info: logo.jpg  used on input line 66. on input line 66.
@@ -904,6 +904,9 @@ l.74 \end{titlepage}
 \openout2 = `certificate/certificate.aux'.
 
  (certificate/certificate.tex
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 12.
+
 Underfull \hbox (badness 10000) in paragraph at lines 12--13
 
  []
@@ -932,12 +935,8 @@ l.67 \include{certificate/certificate}
 ]
 \openout2 = `declaration/declaration.aux'.
 
- (declaration/declaration.tex
-Underfull \hbox (badness 10000) in paragraph at lines 8--9
-
- []
-
-) [2
+ (declaration/declaration.tex)
+[2
 
 
 ]
@@ -955,7 +954,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--9
 \openout2 = `ack/ack.aux'.
 
  (ack/ack.tex
-Underfull \hbox (badness 10000) in paragraph at lines 8--9
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
 
  []
 
@@ -966,7 +965,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--9
 \openout2 = `abstract/abstracts.aux'.
 
  (abstract/abstracts.tex
-Underfull \hbox (badness 10000) in paragraph at lines 8--9
+Underfull \hbox (badness 10000) in paragraph at lines 8--11
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--11
 
  []
 
@@ -977,9 +981,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--9
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 75.
  (main.toc
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 2.
-
 Overfull \hbox (3.04482pt too wide) in paragraph at lines 24--24
  [][] [][]\T1/ptm/m/n/12 Comparison be-tween Spa-tial Do-main Tech-nique And Fr
 e-quency 
@@ -1081,7 +1082,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 Chapter 2.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 13.
-<images/ch2/colorSpectrum.jpg, id=436, 414.79968pt x 132.495pt>
+<images/ch2/colorSpectrum.jpg, id=406, 414.79968pt x 132.495pt>
 File: images/ch2/colorSpectrum.jpg Graphic file (type jpg)
 <use images/ch2/colorSpectrum.jpg>
 Package pdftex.def Info: images/ch2/colorSpectrum.jpg  used on input line 16. o
@@ -1093,7 +1094,7 @@ e 16.
 
 
 ]
-<images/ch2/wavelength.jpg, id=442, 555.57562pt x 155.07938pt>
+<images/ch2/wavelength.jpg, id=412, 555.57562pt x 155.07938pt>
 File: images/ch2/wavelength.jpg Graphic file (type jpg)
 <use images/ch2/wavelength.jpg>
 Package pdftex.def Info: images/ch2/wavelength.jpg  used on input line 25. on i
@@ -1108,21 +1109,21 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [17 <./images/ch2/colorSpectrum.jpg> <./images/ch2/wavelength.jpg>]
-<images/ch2/mixtureLight.jpg, id=450, 652.68843pt x 497.60907pt>
+<images/ch2/mixtureLight.jpg, id=420, 652.68843pt x 497.60907pt>
 File: images/ch2/mixtureLight.jpg Graphic file (type jpg)
 <use images/ch2/mixtureLight.jpg>
 Package pdftex.def Info: images/ch2/mixtureLight.jpg  used on input line 48. on
  input line 48.
 Package pdftex.def Info: Requested size: 416.83289pt x 317.80054pt on input lin
 e 48.
-<images/ch2/mixturepigment.jpg, id=451, 652.68843pt x 496.85625pt>
+<images/ch2/mixturepigment.jpg, id=421, 652.68843pt x 496.85625pt>
 File: images/ch2/mixturepigment.jpg Graphic file (type jpg)
 <use images/ch2/mixturepigment.jpg>
 Package pdftex.def Info: images/ch2/mixturepigment.jpg  used on input line 54. 
 on input line 54.
 Package pdftex.def Info: Requested size: 416.83289pt x 317.31975pt on input lin
 e 54.
-<images/ch2/imageMatrix.jpg, id=452, 347.79938pt x 97.86563pt>
+<images/ch2/imageMatrix.jpg, id=422, 347.79938pt x 97.86563pt>
 File: images/ch2/imageMatrix.jpg Graphic file (type jpg)
 <use images/ch2/imageMatrix.jpg>
 Package pdftex.def Info: images/ch2/imageMatrix.jpg  used on input line 64. on 
@@ -1144,14 +1145,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [19 <./images/ch2/mixtureLight.jpg> <./images/ch2/mixturepigment.jpg>]
-<images/ch2/leena.jpg, id=463, 228.855pt x 162.6075pt>
+<images/ch2/leena.jpg, id=433, 228.855pt x 162.6075pt>
 File: images/ch2/leena.jpg Graphic file (type jpg)
 <use images/ch2/leena.jpg>
 Package pdftex.def Info: images/ch2/leena.jpg  used on input line 71. on input 
 line 71.
 Package pdftex.def Info: Requested size: 416.83289pt x 296.1843pt on input line
  71.
-<images/ch2/vectorAndBitmap.jpg, id=465, 377.15906pt x 194.22563pt>
+<images/ch2/vectorAndBitmap.jpg, id=435, 377.15906pt x 194.22563pt>
 File: images/ch2/vectorAndBitmap.jpg Graphic file (type jpg)
 <use images/ch2/vectorAndBitmap.jpg>
 Package pdftex.def Info: images/ch2/vectorAndBitmap.jpg  used on input line 82.
@@ -1173,7 +1174,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [21 <./images/ch2/vectorAndBitmap.jpg>]
-<images/ch2/grayScaleImage.jpg, id=475, 194.22563pt x 192.72pt>
+<images/ch2/grayScaleImage.jpg, id=445, 194.22563pt x 192.72pt>
 File: images/ch2/grayScaleImage.jpg Graphic file (type jpg)
 <use images/ch2/grayScaleImage.jpg>
 Package pdftex.def Info: images/ch2/grayScaleImage.jpg  used on input line 112.
@@ -1185,7 +1186,7 @@ Overfull \hbox (28.45789pt too wide) in paragraph at lines 112--113
  [][] 
  []
 
-<images/ch2/grayLevelImage.jpg, id=476, 36.88782pt x 287.57437pt>
+<images/ch2/grayLevelImage.jpg, id=446, 36.88782pt x 287.57437pt>
 File: images/ch2/grayLevelImage.jpg Graphic file (type jpg)
 <use images/ch2/grayLevelImage.jpg>
 Package pdftex.def Info: images/ch2/grayLevelImage.jpg  used on input line 116.
@@ -1199,14 +1200,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [22 <./images/ch2/grayScaleImage.jpg> <./images/ch2/grayLevelImage.jpg>]
-<images/ch2/RGBColorCube.jpg, id=484, 334.24875pt x 287.57437pt>
+<images/ch2/RGBColorCube.jpg, id=454, 334.24875pt x 287.57437pt>
 File: images/ch2/RGBColorCube.jpg Graphic file (type jpg)
 <use images/ch2/RGBColorCube.jpg>
 Package pdftex.def Info: images/ch2/RGBColorCube.jpg  used on input line 132. o
 n input line 132.
 Package pdftex.def Info: Requested size: 334.24792pt x 287.57367pt on input lin
 e 132.
-<images/ch2/RGB24ColorCube.jpg, id=485, 290.58563pt x 244.66406pt>
+<images/ch2/RGB24ColorCube.jpg, id=455, 290.58563pt x 244.66406pt>
 File: images/ch2/RGB24ColorCube.jpg Graphic file (type jpg)
 <use images/ch2/RGB24ColorCube.jpg>
 Package pdftex.def Info: images/ch2/RGB24ColorCube.jpg  used on input line 139.
@@ -1221,35 +1222,35 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [23 <./images/ch2/RGBColorCube.jpg>]
-<images/ch2/HSVModel.jpg, id=493, 460.72125pt x 420.06938pt>
+<images/ch2/HSVModel.jpg, id=463, 460.72125pt x 420.06938pt>
 File: images/ch2/HSVModel.jpg Graphic file (type jpg)
 <use images/ch2/HSVModel.jpg>
 Package pdftex.def Info: images/ch2/HSVModel.jpg  used on input line 162. on in
 put line 162.
 Package pdftex.def Info: Requested size: 230.36006pt x 210.03418pt on input lin
 e 162.
-<images/ch2/H.jpg, id=494, 734.745pt x 474.27188pt>
+<images/ch2/H.jpg, id=464, 734.745pt x 474.27188pt>
 File: images/ch2/H.jpg Graphic file (type jpg)
 <use images/ch2/H.jpg>
 Package pdftex.def Info: images/ch2/H.jpg  used on input line 170. on input lin
 e 170.
 Package pdftex.def Info: Requested size: 293.89279pt x 189.70538pt on input lin
 e 170.
-<images/ch2/S.jpg, id=495, 469.00218pt x 148.30406pt>
+<images/ch2/S.jpg, id=465, 469.00218pt x 148.30406pt>
 File: images/ch2/S.jpg Graphic file (type jpg)
 <use images/ch2/S.jpg>
 Package pdftex.def Info: images/ch2/S.jpg  used on input line 175. on input lin
 e 175.
 Package pdftex.def Info: Requested size: 187.59755pt x 59.32056pt on input line
  175.
-<images/ch2/image.jpg, id=496, 380.17032pt x 205.5178pt>
+<images/ch2/image.jpg, id=466, 380.17032pt x 205.5178pt>
 File: images/ch2/image.jpg Graphic file (type jpg)
 <use images/ch2/image.jpg>
 Package pdftex.def Info: images/ch2/image.jpg  used on input line 187. on input
  line 187.
 Package pdftex.def Info: Requested size: 199.17473pt x 107.67267pt on input lin
 e 187.
-<images/ch2/brightness.jpg, id=497, 383.93437pt x 207.77625pt>
+<images/ch2/brightness.jpg, id=467, 383.93437pt x 207.77625pt>
 File: images/ch2/brightness.jpg Graphic file (type jpg)
 <use images/ch2/brightness.jpg>
 Package pdftex.def Info: images/ch2/brightness.jpg  used on input line 190. on 
@@ -1276,7 +1277,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [25 <./images/ch2/HSVModel.jpg> <./images/ch2/H.jpg> <./images/ch2/S.jpg> <./im
 ages/ch2/image.jpg> <./images/ch2/brightness.jpg>]
-<images/ch2/spatialDomain.jpg, id=509, 221.32687pt x 205.5178pt>
+<images/ch2/spatialDomain.jpg, id=479, 221.32687pt x 205.5178pt>
 File: images/ch2/spatialDomain.jpg Graphic file (type jpg)
 <use images/ch2/spatialDomain.jpg>
 Package pdftex.def Info: images/ch2/spatialDomain.jpg  used on input line 214. 
@@ -1291,7 +1292,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [26]
-<images/ch2/basicTransformation.jpg, id=516, 291.33844pt x 259.7203pt>
+<images/ch2/basicTransformation.jpg, id=486, 291.33844pt x 259.7203pt>
 File: images/ch2/basicTransformation.jpg Graphic file (type jpg)
 <use images/ch2/basicTransformation.jpg>
 Package pdftex.def Info: images/ch2/basicTransformation.jpg  used on input line
@@ -1333,7 +1334,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [30]
-<images/ch2/imageEnhancementTechniques.jpg, id=539, 450.9347pt x 219.06844pt>
+<images/ch2/imageEnhancementTechniques.jpg, id=509, 450.9347pt x 219.06844pt>
 File: images/ch2/imageEnhancementTechniques.jpg Graphic file (type jpg)
 <use images/ch2/imageEnhancementTechniques.jpg>
 Package pdftex.def Info: images/ch2/imageEnhancementTechniques.jpg  used on inp
@@ -1532,7 +1533,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [52]
-<images/ch3/retinexModel.jpg, id=651, 1028.34187pt x 578.16pt>
+<images/ch3/retinexModel.jpg, id=621, 1028.34187pt x 578.16pt>
 File: images/ch3/retinexModel.jpg Graphic file (type jpg)
 <use images/ch3/retinexModel.jpg>
 Package pdftex.def Info: images/ch3/retinexModel.jpg  used on input line 247. o
@@ -1564,7 +1565,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [54 <./images/ch3/retinexModel.jpg>]
-<images/ch3/powerLawTransformation.jpg, id=664, 377.91188pt x 283.0575pt>
+<images/ch3/powerLawTransformation.jpg, id=634, 377.91188pt x 283.0575pt>
 File: images/ch3/powerLawTransformation.jpg Graphic file (type jpg)
 <use images/ch3/powerLawTransformation.jpg>
 Package pdftex.def Info: images/ch3/powerLawTransformation.jpg  used on input l
@@ -1579,7 +1580,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [55 <./images/ch3/powerLawTransformation.jpg>]
-<images/ch3/histogramEqualization.jpg, id=669, 243.91125pt x 228.10219pt>
+<images/ch3/histogramEqualization.jpg, id=639, 243.91125pt x 228.10219pt>
 File: images/ch3/histogramEqualization.jpg Graphic file (type jpg)
 <use images/ch3/histogramEqualization.jpg>
 Package pdftex.def Info: images/ch3/histogramEqualization.jpg  used on input li
@@ -1594,7 +1595,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [56 <./images/ch3/histogramEqualization.jpg>]
-<images/ch3/method1.jpg, id=675, 304.13625pt x 252.945pt>
+<images/ch3/method1.jpg, id=645, 304.13625pt x 252.945pt>
 File: images/ch3/method1.jpg Graphic file (type jpg)
 <use images/ch3/method1.jpg>
 Package pdftex.def Info: images/ch3/method1.jpg  used on input line 357. on inp
@@ -1636,7 +1637,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [59]
-<images/ch3/bilinearInterpolation.jpg, id=698, 416.30531pt x 396.7322pt>
+<images/ch3/bilinearInterpolation.jpg, id=668, 416.30531pt x 396.7322pt>
 File: images/ch3/bilinearInterpolation.jpg Graphic file (type jpg)
 <use images/ch3/bilinearInterpolation.jpg>
 Package pdftex.def Info: images/ch3/bilinearInterpolation.jpg  used on input li
@@ -1656,7 +1657,7 @@ Overfull \hbox (3.75826pt too wide) in paragraph at lines 471--471
 ) 
  []
 
-<images/ch3/CLAHE.jpg, id=705, 328.22626pt x 171.64125pt>
+<images/ch3/CLAHE.jpg, id=675, 328.22626pt x 171.64125pt>
 File: images/ch3/CLAHE.jpg Graphic file (type jpg)
 <use images/ch3/CLAHE.jpg>
 Package pdftex.def Info: images/ch3/CLAHE.jpg  used on input line 484. on input
@@ -1704,14 +1705,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
  (mainMatter/ch5.tex
 Chapter 5.
-<images/ch5/bulb_input.jpg, id=736, 339.51843pt x 376.40625pt>
+<images/ch5/bulb_input.jpg, id=706, 339.51843pt x 376.40625pt>
 File: images/ch5/bulb_input.jpg Graphic file (type jpg)
 <use images/ch5/bulb_input.jpg>
 Package pdftex.def Info: images/ch5/bulb_input.jpg  used on input line 11. on i
 nput line 11.
 Package pdftex.def Info: Requested size: 199.1692pt x 220.80844pt on input line
  11.
-<images/ch5/bulb_ssr.jpg, id=737, 338.76563pt x 376.40625pt>
+<images/ch5/bulb_ssr.jpg, id=707, 338.76563pt x 376.40625pt>
 File: images/ch5/bulb_ssr.jpg Graphic file (type jpg)
 <use images/ch5/bulb_ssr.jpg>
 Package pdftex.def Info: images/ch5/bulb_ssr.jpg  used on input line 16. on inp
@@ -1729,7 +1730,7 @@ Package pdftex.def Info: images/ch5/bulb_input.jpg  used on input line 29. on i
 nput line 29.
 Package pdftex.def Info: Requested size: 199.1692pt x 220.80844pt on input line
  29.
-<images/ch5/bulb_msr.jpg, id=741, 338.76563pt x 376.40625pt>
+<images/ch5/bulb_msr.jpg, id=711, 338.76563pt x 376.40625pt>
 File: images/ch5/bulb_msr.jpg Graphic file (type jpg)
 <use images/ch5/bulb_msr.jpg>
 Package pdftex.def Info: images/ch5/bulb_msr.jpg  used on input line 34. on inp
@@ -1760,7 +1761,7 @@ Package pdftex.def Info: images/ch5/bulb_input.jpg  used on input line 46. on i
 nput line 46.
 Package pdftex.def Info: Requested size: 199.1692pt x 220.80844pt on input line
  46.
-<images/ch5/bulb_msrcr.jpg, id=753, 338.76563pt x 376.40625pt>
+<images/ch5/bulb_msrcr.jpg, id=723, 338.76563pt x 376.40625pt>
 File: images/ch5/bulb_msrcr.jpg Graphic file (type jpg)
 <use images/ch5/bulb_msrcr.jpg>
 Package pdftex.def Info: images/ch5/bulb_msrcr.jpg  used on input line 51. on i
@@ -1772,14 +1773,14 @@ Overfull \hbox (28.46078pt too wide) in paragraph at lines 51--52
  [][] 
  []
 
-<images/ch5/palace_input.jpg, id=757, 421.575pt x 316.18124pt>
+<images/ch5/palace_input.jpg, id=727, 421.575pt x 316.18124pt>
 File: images/ch5/palace_input.jpg Graphic file (type jpg)
 <use images/ch5/palace_input.jpg>
 Package pdftex.def Info: images/ch5/palace_input.jpg  used on input line 64. on
  input line 64.
 Package pdftex.def Info: Requested size: 199.1695pt x 149.37712pt on input line
  64.
-<images/ch5/palace_ssr.jpg, id=758, 421.575pt x 316.18124pt>
+<images/ch5/palace_ssr.jpg, id=728, 421.575pt x 316.18124pt>
 File: images/ch5/palace_ssr.jpg Graphic file (type jpg)
 <use images/ch5/palace_ssr.jpg>
 Package pdftex.def Info: images/ch5/palace_ssr.jpg  used on input line 69. on i
@@ -1797,7 +1798,7 @@ Package pdftex.def Info: images/ch5/palace_input.jpg  used on input line 92. on
  input line 92.
 Package pdftex.def Info: Requested size: 199.1695pt x 149.37712pt on input line
  92.
-<images/ch5/palace_msr.jpg, id=762, 421.575pt x 316.18124pt>
+<images/ch5/palace_msr.jpg, id=732, 421.575pt x 316.18124pt>
 File: images/ch5/palace_msr.jpg Graphic file (type jpg)
 <use images/ch5/palace_msr.jpg>
 Package pdftex.def Info: images/ch5/palace_msr.jpg  used on input line 97. on i
@@ -1822,7 +1823,7 @@ Package pdftex.def Info: images/ch5/palace_input.jpg  used on input line 109. o
 n input line 109.
 Package pdftex.def Info: Requested size: 199.1695pt x 149.37712pt on input line
  109.
-<images/ch5/palace_msrcr.jpg, id=770, 421.575pt x 316.18124pt>
+<images/ch5/palace_msrcr.jpg, id=740, 421.575pt x 316.18124pt>
 File: images/ch5/palace_msrcr.jpg Graphic file (type jpg)
 <use images/ch5/palace_msrcr.jpg>
 Package pdftex.def Info: images/ch5/palace_msrcr.jpg  used on input line 114. o
@@ -1842,14 +1843,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [69 <./images/ch5/palace_input.jpg> <./images/ch5/palace_ssr.jpg> <./images/ch5
 /palace_msr.jpg>]
-<images/ch5/robot_input.jpg, id=778, 338.76563pt x 338.76563pt>
+<images/ch5/robot_input.jpg, id=748, 338.76563pt x 338.76563pt>
 File: images/ch5/robot_input.jpg Graphic file (type jpg)
 <use images/ch5/robot_input.jpg>
 Package pdftex.def Info: images/ch5/robot_input.jpg  used on input line 128. on
  input line 128.
 Package pdftex.def Info: Requested size: 199.1773pt x 199.1773pt on input line 
 128.
-<images/ch5/robot_ssr.jpg, id=779, 338.76563pt x 338.76563pt>
+<images/ch5/robot_ssr.jpg, id=749, 338.76563pt x 338.76563pt>
 File: images/ch5/robot_ssr.jpg Graphic file (type jpg)
 <use images/ch5/robot_ssr.jpg>
 Package pdftex.def Info: images/ch5/robot_ssr.jpg  used on input line 133. on i
@@ -1867,7 +1868,7 @@ Package pdftex.def Info: images/ch5/robot_input.jpg  used on input line 157. on
  input line 157.
 Package pdftex.def Info: Requested size: 199.1773pt x 199.1773pt on input line 
 157.
-<images/ch5/robot_msr.jpg, id=783, 338.76563pt x 338.76563pt>
+<images/ch5/robot_msr.jpg, id=753, 338.76563pt x 338.76563pt>
 File: images/ch5/robot_msr.jpg Graphic file (type jpg)
 <use images/ch5/robot_msr.jpg>
 Package pdftex.def Info: images/ch5/robot_msr.jpg  used on input line 162. on i
@@ -1893,7 +1894,7 @@ Package pdftex.def Info: images/ch5/robot_input.jpg  used on input line 174. on
  input line 174.
 Package pdftex.def Info: Requested size: 199.1773pt x 199.1773pt on input line 
 174.
-<images/ch5/robot_msrcr.jpg, id=791, 338.76563pt x 338.76563pt>
+<images/ch5/robot_msrcr.jpg, id=761, 338.76563pt x 338.76563pt>
 File: images/ch5/robot_msrcr.jpg Graphic file (type jpg)
 <use images/ch5/robot_msrcr.jpg>
 Package pdftex.def Info: images/ch5/robot_msrcr.jpg  used on input line 179. on
@@ -1918,7 +1919,7 @@ Package pdftex.def Info: images/ch5/bulb_input.jpg  used on input line 194. on
 input line 194.
 Package pdftex.def Info: Requested size: 199.1692pt x 220.80844pt on input line
  194.
-<images/ch5/bulb_power.jpg, id=800, 338.76563pt x 376.40625pt>
+<images/ch5/bulb_power.jpg, id=770, 338.76563pt x 376.40625pt>
 File: images/ch5/bulb_power.jpg Graphic file (type jpg)
 <use images/ch5/bulb_power.jpg>
 Package pdftex.def Info: images/ch5/bulb_power.jpg  used on input line 199. on 
@@ -1936,7 +1937,7 @@ Package pdftex.def Info: images/ch5/palace_input.jpg  used on input line 214. o
 n input line 214.
 Package pdftex.def Info: Requested size: 199.1695pt x 149.37712pt on input line
  214.
-<images/ch5/palace_power.jpg, id=804, 421.575pt x 316.18124pt>
+<images/ch5/palace_power.jpg, id=774, 421.575pt x 316.18124pt>
 File: images/ch5/palace_power.jpg Graphic file (type jpg)
 <use images/ch5/palace_power.jpg>
 Package pdftex.def Info: images/ch5/palace_power.jpg  used on input line 219. o
@@ -1961,7 +1962,7 @@ Package pdftex.def Info: images/ch5/robot_input.jpg  used on input line 235. on
  input line 235.
 Package pdftex.def Info: Requested size: 199.1773pt x 199.1773pt on input line 
 235.
-<images/ch5/robot_power.jpg, id=812, 338.76563pt x 338.76563pt>
+<images/ch5/robot_power.jpg, id=782, 338.76563pt x 338.76563pt>
 File: images/ch5/robot_power.jpg Graphic file (type jpg)
 <use images/ch5/robot_power.jpg>
 Package pdftex.def Info: images/ch5/robot_power.jpg  used on input line 240. on
@@ -1979,7 +1980,7 @@ Package pdftex.def Info: images/ch5/bulb_input.jpg  used on input line 255. on
 input line 255.
 Package pdftex.def Info: Requested size: 199.1692pt x 220.80844pt on input line
  255.
-<images/ch5/bulb_hist_equ.jpg, id=816, 338.76563pt x 376.40625pt>
+<images/ch5/bulb_hist_equ.jpg, id=786, 338.76563pt x 376.40625pt>
 File: images/ch5/bulb_hist_equ.jpg Graphic file (type jpg)
 <use images/ch5/bulb_hist_equ.jpg>
 Package pdftex.def Info: images/ch5/bulb_hist_equ.jpg  used on input line 260. 
@@ -2004,7 +2005,7 @@ Package pdftex.def Info: images/ch5/palace_input.jpg  used on input line 276. o
 n input line 276.
 Package pdftex.def Info: Requested size: 199.1695pt x 149.37712pt on input line
  276.
-<images/ch5/palace_hist_equ.jpg, id=824, 421.575pt x 316.18124pt>
+<images/ch5/palace_hist_equ.jpg, id=794, 421.575pt x 316.18124pt>
 File: images/ch5/palace_hist_equ.jpg Graphic file (type jpg)
 <use images/ch5/palace_hist_equ.jpg>
 Package pdftex.def Info: images/ch5/palace_hist_equ.jpg  used on input line 281
@@ -2029,7 +2030,7 @@ Package pdftex.def Info: images/ch5/robot_input.jpg  used on input line 298. on
  input line 298.
 Package pdftex.def Info: Requested size: 199.1773pt x 199.1773pt on input line 
 298.
-<images/ch5/robot_hist_equ.jpg, id=832, 338.76563pt x 338.76563pt>
+<images/ch5/robot_hist_equ.jpg, id=802, 338.76563pt x 338.76563pt>
 File: images/ch5/robot_hist_equ.jpg Graphic file (type jpg)
 <use images/ch5/robot_hist_equ.jpg>
 Package pdftex.def Info: images/ch5/robot_hist_equ.jpg  used on input line 303.
@@ -2047,7 +2048,7 @@ Package pdftex.def Info: images/ch5/bulb_input.jpg  used on input line 319. on
 input line 319.
 Package pdftex.def Info: Requested size: 199.1692pt x 220.80844pt on input line
  319.
-<images/ch5/bulb_adapt_hist.jpg, id=836, 338.76563pt x 376.40625pt>
+<images/ch5/bulb_adapt_hist.jpg, id=806, 338.76563pt x 376.40625pt>
 File: images/ch5/bulb_adapt_hist.jpg Graphic file (type jpg)
 <use images/ch5/bulb_adapt_hist.jpg>
 Package pdftex.def Info: images/ch5/bulb_adapt_hist.jpg  used on input line 324
@@ -2065,7 +2066,7 @@ Package pdftex.def Info: images/ch5/palace_input.jpg  used on input line 341. o
 n input line 341.
 Package pdftex.def Info: Requested size: 199.1695pt x 149.37712pt on input line
  341.
-<images/ch5/palace_adapt_hist.jpg, id=840, 421.575pt x 316.18124pt>
+<images/ch5/palace_adapt_hist.jpg, id=810, 421.575pt x 316.18124pt>
 File: images/ch5/palace_adapt_hist.jpg Graphic file (type jpg)
 <use images/ch5/palace_adapt_hist.jpg>
 Package pdftex.def Info: images/ch5/palace_adapt_hist.jpg  used on input line 3
@@ -2098,7 +2099,7 @@ Package pdftex.def Info: images/ch5/robot_input.jpg  used on input line 363. on
  input line 363.
 Package pdftex.def Info: Requested size: 199.1773pt x 199.1773pt on input line 
 363.
-<images/ch5/robot_adapt_hist.jpg, id=846, 338.76563pt x 338.76563pt>
+<images/ch5/robot_adapt_hist.jpg, id=816, 338.76563pt x 338.76563pt>
 File: images/ch5/robot_adapt_hist.jpg Graphic file (type jpg)
 <use images/ch5/robot_adapt_hist.jpg>
 Package pdftex.def Info: images/ch5/robot_adapt_hist.jpg  used on input line 36
@@ -2135,36 +2136,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
  (mainMatter/ch6.tex
 Chapter 6.
-
-Overfull \hbox (4.73413pt too wide) in paragraph at lines 7--8
-\T1/ptm/m/n/12 Retinex with color Restora-tion (MSRCR), Multi-scale Retinex wit
-h Chro-matic-ity Preser-
- []
-
-[79
+) [79
 
 
 
 ]
-Overfull \hbox (2.38313pt too wide) in paragraph at lines 20--21
-\T1/ptm/m/n/12 The Retinex Im-age En-hance-ment Al-go-rithm is an au-to-matic i
-m-age en-hance-ment method
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[80])
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[81]
 No file main.nls.
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 105.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 105.
@@ -2177,7 +2153,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 105.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 105.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 105.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 64F9AB4556FFB216AD0AB9DCD20828BF;3573.
+(rerunfilecheck)             Checksum: F0DC1193EA0E55DA2A9DCEAC3A5C796E;3202.
 
 
 LaTeX Warning: There were undefined references.
@@ -2188,10 +2164,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 105.
  ) 
 Here is how much of TeX's memory you used:
- 10865 strings out of 493312
- 162954 string characters out of 3138895
+ 10851 strings out of 493312
+ 162796 string characters out of 3138895
  371263 words of memory out of 3000000
- 13850 multiletter control sequences out of 15000+200000
+ 13844 multiletter control sequences out of 15000+200000
  44779 words of font info for 56 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  36i,13n,43p,2718b,494s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2206,9 +2182,9 @@ ts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
  Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9
 /fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/
 times/utmri8a.pfb>
-Output written on main.pdf (83 pages, 2542200 bytes).
+Output written on main.pdf (81 pages, 2537391 bytes).
 PDF statistics:
- 964 PDF objects out of 1000 (max. 8388607)
- 224 named destinations out of 1000 (max. 500000)
- 636 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 921 PDF objects out of 1000 (max. 8388607)
+ 216 named destinations out of 1000 (max. 500000)
+ 588 words of extra memory for PDF output out of 10000 (max. 10000000)
 

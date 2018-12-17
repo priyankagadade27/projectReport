@@ -1,30 +1,9 @@
-\chapter{Conclusion and Future Scope}
-Retinex Theory was formulated by Edwin H. Land In 1964. His theory and an extension, the “reset Retinex” were further formalized by Land and Mc Cann [1]. It was the first attempt to simulate and explain the human visual system how it perceives colours, based on experiments using Mondrian patterns [3].
-\section{Introduction}
-Besides digital photography, retinex algorithms are used to make the information in astronomical photos visible and detect, in medicine, poorly visible structures in X-rays or scanners. In brief it helps to achieve many features such as sharpening, colour constancy processing and dynamic range compression [5]. The Retinex Image Enhancement Algorithm is an automatic image enhancement method that enhances a digital image in terms of dynamic range compression, colour independence from the spectral distribution of the scene illuminate, and colour/ lightness rendition. The digital image enhanced by the Retinex Image Enhancement Algorithm is much closer to the scene perceived by the human visual system, under all kinds and levels of lighting variations, than the digital image enhanced by any other method [6]. Image enhancement technology has permeated in many areas of science, engineering and civilian, such as biomedicine images, astrophotography, satellite pictures, computer vision, surveillance systems, civilian cameras, etc.[7]
+\chapter{Conclusion}
+In this thesis, methods that we applied balances the requirements of both appearance
+enhancement and being faithful to the original appearance of an image has been
+proposed and applied to the enhancement of full color images. Results have shown
+the effectiveness of our algorithm in improving the contrast and colorfulness of
+the original images. In this thesis, It is shown that we can get better image
+from different Retinex Algorithms,Power Law Transformation, Histogram Equalization and Adaptive Histogram Equalization specification on color images gives us better results.
 
-\section{Problem Definition}
-Our system will enhance the input image by applying retinex algorithms: Multi-Scale Retinex with color Restoration (MSRCR), Multi-scale Retinex with Chromaticity Preservation (MSRCP) and Automated Multi-Scale Retinex with Color Restoration (AMSRCR). Thus, the Problem definition can be proposed as follows: To implement the Algorithms: MSRCR, MSRCP and AMSRCR. Also, these algorithms require implementation of Single-Scale Retinex (SSR) algorithm and the SimplestColorBalance algorithm [35].
-\section{Objective}
-	\begin{itemize}
-		\item To implement Single-Scale Retinex and Color Restoration Algorithms.
-		\item To implement Multi-Scale Retinex with Color Restoration using above 
-		algorithms (MSRCR).
-		\item To implement Multi-Scale retinex with Chromaticity preservation- MSRCP.(a 
-		modified version of above algorithm).
-		\item To implement Automated Multi-Scale Retinex with Color Restoration algorithm.	
-		(An automated (image independent) approach to MSRCR)- AMSRCR.
-	\end{itemize}
-	
-\section{Scope}
-The Retinex Image Enhancement Algorithm is an automatic image enhancement method that enhances a digital image in terms of dynamic range compression, colour independence from the spectral distribution of the scene illuminate, and colour/ lightness rendition. So, the scope of this project is to implement the Retinex based image Enhancement Algorithms, which involves the implementation of following three models of retinex algorithms:
-	\begin{itemize}
-		\item Multi-Scale Retinex algorithm with color Restoration (MSRCR)
-		\item Multi-Scale Retinex algorithm with Chromaticity Preservation (MSRCP)
-		\item Automated Multi-Scale Retinex algorithm with Color Restoration (AMSRCR)
-
-	\end{itemize}
-\section{Existing System}
-The existing image enhancement techniques like auto gain/offset, gamma correction, histogram equalization and homomorphic filtering heavily depend on input images. For auto gain/offset, it could achieve dynamic range compression but at the loss of details due to saturation and clipping. For gamma correction, it is good to improve pictures either too dark or too bright but it is a global function applied to the picture, thus there is no enhancement involved. For histogram equalization and homomorphic filtering, they all failed for bi-modal pictures, which include both dark and bright areas. But for retinex, it could achieve satisfactory results for both pictures, thus its benefits are obviously to see.[8]
-\section{Outline}
-This project report is organized into six chapters: Chapter 1 introduces the project; chapter 2 describes related work and reviews previous works; Chapter 3 presents the technology that will be used. Chapter 4 presents the system analysis and design in detail, chapter 5 presents the results and Chapter 6 is the Conclusion.
+The Retinex Image Enhancement Algorithm is an automatic image enhancement method that enhances a digital image in terms of dynamic range compression, colour independence from the spectral distribution of the scene illuminate, and colour/ lightness rendition. The digital image enhanced by the Retinex Image Enhancement Algorithm is much closer to the scene perceived by the human visual system, under all kinds and levels of lighting variations, than the digital image enhanced by any other method.
