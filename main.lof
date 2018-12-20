@@ -1,45 +1,49 @@
 \select@language {english}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Color spectrum seen by passing White light through a prism\relax }}{17}{figure.caption.5}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Wavelengths comprising the visible range of the electromagnetic spectrum\relax }}{17}{figure.caption.6}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Primary and secondary colors of light\relax }}{19}{figure.caption.7}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Primary and secondary colors of pigments\relax }}{19}{figure.caption.8}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Digital Image of "Lenna" with different number of pixels\relax }}{20}{figure.caption.9}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces a) Vector and b) bitmap images\relax }}{21}{figure.caption.10}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces a) Greyscale images y b) Grey levels of greyscale images\relax }}{22}{figure.caption.12}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Schematic of the RGB color cube. Points along the main diagonal have gray values, from black at the origin to white at point (1,1,1)\relax }}{23}{figure.caption.14}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces RGB 24-bits color cube\relax }}{24}{figure.caption.15}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Cone of HSV model\relax }}{25}{figure.caption.17}
-\contentsline {figure}{\numberline {2.11}{\ignorespaces a) Original picture. b) Component brightness of original picture\relax }}{25}{figure.caption.20}
-\contentsline {figure}{\numberline {2.12}{\ignorespaces Spatial Domain\relax }}{27}{figure.caption.22}
-\contentsline {figure}{\numberline {2.13}{\ignorespaces Basic transformations\relax }}{28}{figure.caption.23}
-\contentsline {figure}{\numberline {2.14}{\ignorespaces Image enhancement techniques\relax }}{32}{figure.caption.26}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Color spectrum seen by passing White light through a prism\relax }}{7}{figure.caption.6}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Wavelengths comprising the visible range of the electromagnetic spectrum\relax }}{7}{figure.caption.7}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Primary and secondary colors of light\relax }}{8}{figure.caption.8}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Primary and secondary colors of pigments\relax }}{9}{figure.caption.9}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Digital Image of "Lenna" with different number of pixels\relax }}{10}{figure.caption.10}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces a) Vector and b) bitmap images\relax }}{11}{figure.caption.11}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces a) Greyscale images y b) Grey levels of greyscale images\relax }}{12}{figure.caption.13}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Schematic of the RGB color cube. Points along the main diagonal have gray values, from black at the origin to white at point (1,1,1)\relax }}{13}{figure.caption.15}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces RGB 24-bits color cube\relax }}{13}{figure.caption.16}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Cone of HSV model\relax }}{15}{figure.caption.18}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces a) Original picture. b) Component brightness of original picture\relax }}{15}{figure.caption.21}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Spatial Domain\relax }}{17}{figure.caption.23}
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Basic transformations\relax }}{18}{figure.caption.24}
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Image enhancement techniques\relax }}{22}{figure.caption.27}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Result of Retinex Model\relax }}{54}{figure.caption.30}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Plot of power law transformation for various $\gamma $ with input gray level along $X$ axis and output gray level along $Y$ axis.\relax }}{55}{figure.caption.31}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Seed Image and its histogram\relax }}{56}{figure.caption.32}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Block diagram showing the implementation of Method 1\relax }}{58}{figure.caption.33}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Bilinear interpolation to eliminate region boundaries[From Zuiderveld, 1994].\relax }}{61}{figure.caption.34}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Principle of contrast limiting as used in CLAHE. (a) Histogram of a contextual region containing many background pixels. (b) Calculated cumulative histogram. (c) Clipped histogram with excess pixels redistributed throughout the histogram. (d) Cumulative clipped histogram with maximum slope set to the clip limit [From Zuiderveld, 1994].\relax }}{62}{figure.caption.35}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Result of Retinex Model\relax }}{35}{figure.caption.29}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Plot of power law transformation for various $\gamma $ with input gray level along $X$ axis and output gray level along $Y$ axis.\relax }}{36}{figure.caption.30}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Seed Image and its histogram\relax }}{37}{figure.caption.31}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Block diagram showing the implementation of Method 1\relax }}{39}{figure.caption.32}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Bilinear interpolation to eliminate region boundaries[From Zuiderveld, 1994].\relax }}{42}{figure.caption.33}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Principle of contrast limiting as used in CLAHE. (a) Histogram of a contextual region containing many background pixels. (b) Calculated cumulative histogram. (c) Clipped histogram with excess pixels redistributed throughout the histogram. (d) Cumulative clipped histogram with maximum slope set to the clip limit [From Zuiderveld, 1994].\relax }}{43}{figure.caption.34}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Flow chart for Image Enhancement\relax }}{47}{figure.caption.35}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Activity Diagram for Image Enhancement\relax }}{47}{figure.caption.36}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Deployment Diagram for Image Enhancement\relax }}{48}{figure.caption.37}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Component Diagram for Image Enhancement\relax }}{48}{figure.caption.38}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces a) Input Image b)Enhanced Image using SSR\relax }}{67}{figure.caption.36}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces a) Input Image b)Enhanced Image using MSR\relax }}{67}{figure.caption.37}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces a) Input Image b)Enhanced Image using MSRCR\relax }}{68}{figure.caption.38}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces a) Input Image b)Enhanced Image using SSR\relax }}{69}{figure.caption.39}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces a) Input Image b)Enhanced Image using MSR\relax }}{69}{figure.caption.40}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces a) Input Image of Palace b)Enhanced Image of Palace using MSRCR\relax }}{70}{figure.caption.41}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces a) Input Image of Robot b)Enhanced Image of Robot using SSR\relax }}{70}{figure.caption.42}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces a) Input Image of Robot b)Enhanced Image of Robot using MSR\relax }}{71}{figure.caption.43}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces a) Input Image of Robot b)Enhanced Image of Robot using MSRCR\relax }}{71}{figure.caption.44}
-\contentsline {figure}{\numberline {5.10}{\ignorespaces a) Input Image b)Enhanced Image using Power Law Transformation\relax }}{72}{figure.caption.45}
-\contentsline {figure}{\numberline {5.11}{\ignorespaces a) Input Image of Palace b)Enhanced Image of palace using Power Law Transformation\relax }}{73}{figure.caption.46}
-\contentsline {figure}{\numberline {5.12}{\ignorespaces a) Input Image of Robot b)Enhanced Image of Robot using Power Law Transformation\relax }}{73}{figure.caption.47}
-\contentsline {figure}{\numberline {5.13}{\ignorespaces a) Input Image b)Enhanced Image using Histogram Equalization\relax }}{74}{figure.caption.48}
-\contentsline {figure}{\numberline {5.14}{\ignorespaces a) Input Image of Palace b)Enhanced Image of palace using Histogram Equalization\relax }}{74}{figure.caption.49}
-\contentsline {figure}{\numberline {5.15}{\ignorespaces a) Input Image of Robot b)Enhanced Image of Robot using Histogram Equalization\relax }}{75}{figure.caption.50}
-\contentsline {figure}{\numberline {5.16}{\ignorespaces a) Input Image b)Enhanced Image using Adaptive Histogram Equalization\relax }}{76}{figure.caption.51}
-\contentsline {figure}{\numberline {5.17}{\ignorespaces a) Input Image of Palace b)Enhanced Image of palace using Adaptive Histogram Equalization\relax }}{76}{figure.caption.52}
-\contentsline {figure}{\numberline {5.18}{\ignorespaces a) Input Image of Robot b)Enhanced Image of Robot using Adaptive Histogram Equalization\relax }}{77}{figure.caption.53}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces a) Input Image b)Enhanced Image using SSR\relax }}{50}{figure.caption.39}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces a) Input Image b)Enhanced Image using MSR\relax }}{50}{figure.caption.40}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces a) Input Image b)Enhanced Image using MSRCR\relax }}{51}{figure.caption.41}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces a) Input Image b)Enhanced Image using SSR\relax }}{51}{figure.caption.42}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces a) Input Image b)Enhanced Image using MSR\relax }}{52}{figure.caption.43}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces a) Input Image of Palace b)Enhanced Image of Palace using MSRCR\relax }}{52}{figure.caption.44}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces a) Input Image of Robot b)Enhanced Image of Robot using SSR\relax }}{53}{figure.caption.45}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces a) Input Image of Robot b)Enhanced Image of Robot using MSR\relax }}{53}{figure.caption.46}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces a) Input Image of Robot b)Enhanced Image of Robot using MSRCR\relax }}{54}{figure.caption.47}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces a) Input Image b)Enhanced Image using Power Law Transformation\relax }}{55}{figure.caption.48}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces a) Input Image of Palace b)Enhanced Image of palace using Power Law Transformation\relax }}{55}{figure.caption.49}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces a) Input Image of Robot b)Enhanced Image of Robot using Power Law Transformation\relax }}{56}{figure.caption.50}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces a) Input Image b)Enhanced Image using Histogram Equalization\relax }}{56}{figure.caption.51}
+\contentsline {figure}{\numberline {5.14}{\ignorespaces a) Input Image of Palace b)Enhanced Image of palace using Histogram Equalization\relax }}{57}{figure.caption.52}
+\contentsline {figure}{\numberline {5.15}{\ignorespaces a) Input Image of Robot b)Enhanced Image of Robot using Histogram Equalization\relax }}{58}{figure.caption.53}
+\contentsline {figure}{\numberline {5.16}{\ignorespaces a) Input Image b)Enhanced Image using Adaptive Histogram Equalization\relax }}{58}{figure.caption.54}
+\contentsline {figure}{\numberline {5.17}{\ignorespaces a) Input Image of Palace b)Enhanced Image of palace using Adaptive Histogram Equalization\relax }}{59}{figure.caption.55}
+\contentsline {figure}{\numberline {5.18}{\ignorespaces a) Input Image of Robot b)Enhanced Image of Robot using Adaptive Histogram Equalization\relax }}{59}{figure.caption.56}
 \addvspace {10\p@ }

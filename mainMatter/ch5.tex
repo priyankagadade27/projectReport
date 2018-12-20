@@ -1,11 +1,11 @@
 \chapter{Result and Discussion}
-In this project, many low light images tested but only three images result kept in this report along with original images and enhanced images using different Retinex model, Power Law Transformation, Histogram Equalization and Adaptive Histogram Equalization. Also compared all these results with respect to Absolute Mean Difference(AMD),Root Mean Square and Entropy
+In this project, many low light images tested but only three images result kept in this report along with original images and enhanced images using different Retinex model, Power Law Transformation\cite{plt1}, Histogram Equalization\cite{he1} and Adaptive Histogram Equalization\cite{he2}. Also compared all these results with respect to Absolute Mean Difference(AMD),Root Mean Square \cite{amd1} and Entropy\cite{entropy}
 \section{Retinex Model}
-The main focus of this work is to enhance the low light images and this project is implemented in MATLAB tool. Figure \ref{fig:ssr} shows the original low light image of lamp and enhanced image using Single-Scale Retinex(SSR) model. It is clear enhancement in Figure \ref{fig:ssr}(b). The background objects of in figure \ref{fig:ssr}(b) are more clear than original image. The Absolute Mean Difference(AMD),Root Mean Square and Entropy for Single Scale Retinex(SSR) Model of enhanced image of lamp is $69.8401,15.7384$ and $4.9043$ respectively      
+The main focus of this work is to enhance the low light images and this project is implemented in MATLAB tool. Figure \ref{fig:ssr} shows the original low light image of lamp and enhanced image using Single-Scale Retinex(SSR) model\cite{retinex}. It is clear enhancement in Figure \ref{fig:ssr}(b). The background objects of in figure \ref{fig:ssr}(b) are more clear than original image. The Absolute Mean Difference(AMD),Root Mean Square and Entropy for Single Scale Retinex(SSR) Model of enhanced image of lamp is $69.8401,15.7384$ and $4.9043$ respectively      
 
 
 
-\begin{figure}
+\begin{figure}[!htb]
 	\begin{subfigure}{8cm}
 		\centering    
     	\includegraphics[width=7cm,height=9cm,keepaspectratio]{images/ch5/bulb_input.jpg}
@@ -23,7 +23,7 @@ The main focus of this work is to enhance the low light images and this project 
 Figure \ref{fig:msr} shows the original low light image of lamp and enhanced image using Multi-Scale Retinex(MSR) model. It is clear enhancement in Figure \ref{fig:msr}(b). The background objects of in figure \ref{fig:msr}(b) are more clear than original image. The Absolute Mean Difference(AMD),Root Mean Square and Entropy for Multi-Scale Retinex(MSR) model of enhanced image of lamp is $69.9617, 15.7384$ and $5.0033$ respectively      
 
 
-\begin{figure}
+\begin{figure}[!htb]
 	\begin{subfigure}{8cm}
 		\centering    
     	\includegraphics[width=7cm,height=9cm,keepaspectratio]{images/ch5/bulb_input.jpg}
@@ -40,7 +40,7 @@ Figure \ref{fig:msr} shows the original low light image of lamp and enhanced ima
 
 Figure \ref{fig:msrcr} shows the original low light image of lamp and enhanced image using Multi-Scale Retinex with Color Restoration(MSRCR) . It is clear enhancement in Figure \ref{fig:msrcr}(b). The background objects of in figure \ref{fig:msrcr}(b) are more clear than original image. The Absolute Mean Difference(AMD),Root Mean Square and Entropy for Multi-Scale Retinex with Color Restoration((MSRCR) model of enhanced image of lamp is $67.0909,15.7330$ and $6.3657$ respectively      
 
-\begin{figure}
+\begin{figure}[!htb]
 	\begin{subfigure}{8cm}
 		\centering    
     	\includegraphics[width=7cm,height=9cm,keepaspectratio]{images/ch5/bulb_input.jpg}
@@ -58,7 +58,7 @@ Figure \ref{fig:msrcr} shows the original low light image of lamp and enhanced i
 
 Now consider second input image of palace. This image is also taken in low light and will test it for different Retinex Models. Figure \ref{fig:ssrPalace} shows the original low light image of palace and enhanced image using Single-Scale Retinex(SSR) model. In the original image (figure \ref{fig:ssrPalace} (a))  the palace,the valley, edges of rock,small bushy plants and lamps are not clear but these are very clear in the enhanced image(Figur \ref{fig:ssrPalace} (b)). The Absolute Mean Difference(AMD),Root Mean Square and Entropy for Single Scale Retinex(SSR) Model of enhanced image of palace is $103.9633,15.9031$ and $6.8944$ respectively      
 
-\begin{figure}
+\begin{figure}[!htb]
 	\begin{subfigure}{8cm}
 		\centering    
     	\includegraphics[width=7cm,height=9cm,keepaspectratio]{images/ch5/palace_input.jpg}
@@ -86,7 +86,7 @@ Now consider second input image of palace. This image is also taken in low light
 
 Figure \ref{fig:msrPalace} shows the original low light image of palace and enhanced image using Multi-Scale Retinex(MSR) model. In the original image (figure \ref{fig:msrPalace} (a))  the palace,the valley, edges of rock,small bushy plants and lamps are not clear but these are very clear in the enhanced image(Figure \ref{fig:msrPalace} (b)). The Absolute Mean Difference(AMD),Root Mean Square and Entropy for Multi Scale Retinex(MSR) Model of enhanced image of palace is $104.7167, 15.9115$ and $7.1499$ respectively      
 
-\begin{figure}
+\begin{figure}[!htb]
 	\begin{subfigure}{8cm}
 		\centering    
     	\includegraphics[width=7cm,height=9cm,keepaspectratio]{images/ch5/palace_input.jpg}
@@ -103,7 +103,7 @@ Figure \ref{fig:msrPalace} shows the original low light image of palace and enha
 
 Figure \ref{fig:msrcrPalace} shows the original low light image of palace and enhanced image using Multi-Scale Retinex with COlor Restoration(MSRCR) model. In the original image (figure \ref{fig:msrcrPalace} (a))  the palace,the valley, edges of rock,small bushy plants and lamps are not clear but these are very clear in the enhanced image(Figure \ref{fig:msrcrPalace} (b)). The Absolute Mean Difference(AMD),Root Mean Square and Entropy for Multi Scale Retinex with COlor Restoration(MSRCR) Model of enhanced image of palace is $92.2710, 15.9138$ and $7.7566$ respectively      
 
-\begin{figure}
+\begin{figure}[!htb]
 	\begin{subfigure}{8cm}
 		\centering    
     	\includegraphics[width=7cm,height=9cm,keepaspectratio]{images/ch5/palace_input.jpg}
@@ -122,7 +122,7 @@ Figure \ref{fig:msrcrPalace} shows the original low light image of palace and en
 Now consider third input image of robot. This image is also taken in low light and will test it for different Retinex Models. Figure \ref{fig:ssrRobot} shows the original low light image of robot and enhanced image using Single-Scale Retinex(SSR) model. In the original image of robot (figure \ref{fig:ssrRobot} (a))  the robot,laptop, laptop keypad and background strips are not clear but these are very clear in the enhanced image(Figur \ref{fig:ssrRobot} (b)). The Absolute Mean Difference(AMD),Root Mean Square and Entropy for Single Scale Retinex(SSR) Model of enhanced image of robot are $76.3404, 15.9245$ and $6.8248$ respectively      
 
 
-\begin{figure}
+\begin{figure}[!htb]
 	\begin{subfigure}{8cm}
 		\centering    
     	\includegraphics[width=7cm,height=9cm,keepaspectratio]{images/ch5/robot_input.jpg}
@@ -151,7 +151,7 @@ Now consider third input image of robot. This image is also taken in low light a
 Figure \ref{fig:msrRobot} shows the original low light image of robot and enhanced image using Multi-Scale Retinex(MSR) model. In the original image of robot (figure \ref{fig:msrRobot} (a))  the robot,laptop, laptop keypad and background strips are not clear but these are very clear in the enhanced image(Figur \ref{fig:msrRobot} (b)). The Absolute Mean Difference(AMD),Root Mean Square and Entropy for Multi Scale Retinex(MSR) Model of enhanced image of robot are $76.3157, 15.9242$ and $6.9686$ respectively      
 
 
-\begin{figure}
+\begin{figure}[!htb]
 	\begin{subfigure}{8cm}
 		\centering    
     	\includegraphics[width=7cm,height=9cm,keepaspectratio]{images/ch5/robot_input.jpg}
@@ -168,7 +168,7 @@ Figure \ref{fig:msrRobot} shows the original low light image of robot and enhanc
 
 Figure \ref{fig:msrcrRobot} shows the original low light image of robot and enhanced image using Multi-Scale Retinex with Color Restoration(MSRCR) model. In the original image of robot (figure \ref{fig:msrcrRobot} (a))  the robot,laptop, laptop keypad and background strips are not clear but these are very clear in the enhanced image(Figur \ref{fig:msrcrRobot} (b)). The Absolute Mean Difference(AMD),Root Mean Square and Entropy for Multi Scale Retinex with Color Restoration(MSRCR) Model of enhanced image of robot are $74.7684, 15.9179$ and $7.0533$ respectively      
 
-\begin{figure}
+\begin{figure}[!htb]
 	\begin{subfigure}{8cm}
 		\centering    
     	\includegraphics[width=7cm,height=9cm,keepaspectratio]{images/ch5/robot_input.jpg}
@@ -188,7 +188,7 @@ Figure \ref{fig:msrcrRobot} shows the original low light image of robot and enha
 Now test above three images like bulb, palace and robot for Power Law Transformation. Figure \ref{fig:powerLaw} shows the original low light image of lamp and enhanced image using Power Law Transformation . It is clear enhancement in Figure \ref{fig:powerLaw}(b). The background objects of in figure \ref{fig:powerLaw}(b) are more clear than original image. The Absolute Mean Difference(AMD),Root Mean Square and Entropy for Power Law Transformation of enhanced image of lamp is $0.1068,0.1233$ and $5.2476$ respectively      
 
 
-\begin{figure}
+\begin{figure}[!htb]
 	\begin{subfigure}{8cm}
 		\centering    
     	\includegraphics[width=7cm,height=9cm,keepaspectratio]{images/ch5/bulb_input.jpg}
@@ -208,7 +208,7 @@ Figure \ref{fig:palacePowerLaw} shows the original low light image of palace and
 %AMD_power =0.1857
 %r_power =0.1957
 %en_power =7.2592
-\begin{figure}
+\begin{figure}[!htb]
 	\begin{subfigure}{8cm}
 		\centering    
     	\includegraphics[width=7cm,height=9cm,keepaspectratio]{images/ch5/palace_input.jpg}
@@ -229,7 +229,7 @@ Now consider third input image of robot. This image is also taken in low light a
 %r_power =0.2010
 %en_power =6.2899
 
-\begin{figure}
+\begin{figure}[!htb]
 	\begin{subfigure}{8cm}
 		\centering    
     	\includegraphics[width=7cm,height=9cm,keepaspectratio]{images/ch5/robot_input.jpg}
@@ -249,7 +249,7 @@ Now consider third input image of robot. This image is also taken in low light a
 Now test above same three images like bulb, palace and robot for Power Law Transformation. Figure \ref{fig:histEqu} shows the original low light image of lamp and enhanced image using Histogram Equalization. It is clear enhancement in Figure \ref{fig:histEqu}(b). The background objects of in figure \ref{fig:histEqu}(b) are more clear than original image. The Absolute Mean Difference(AMD),Root Mean Square and Entropy for Histogram Equalization of enhanced image of lamp is $104.7539,15.7363$ and $4.6140$ respectively      
 
 
-\begin{figure}
+\begin{figure}[!htb]
 	\begin{subfigure}{8cm}
 		\centering    
     	\includegraphics[width=7cm,height=9cm,keepaspectratio]{images/ch5/bulb_input.jpg}
@@ -270,7 +270,7 @@ Figure \ref{fig:palaceHistEq} shows the original low light image of palace and e
 %r_hist =15.6912
 %en_hist =5.9325
 
-\begin{figure}
+\begin{figure}[!htb]
 	\begin{subfigure}{8cm}
 		\centering    
     	\includegraphics[width=7cm,height=9cm,keepaspectratio]{images/ch5/palace_input.jpg}
@@ -292,7 +292,7 @@ Now consider third input image of robot. This image is also taken in low light a
 %en_hist =5.5086
 
 
-\begin{figure}
+\begin{figure}[!htb]
 	\begin{subfigure}{8cm}
 		\centering    
     	\includegraphics[width=7cm,height=9cm,keepaspectratio]{images/ch5/robot_input.jpg}
@@ -313,7 +313,7 @@ Now consider third input image of robot. This image is also taken in low light a
 Now test same above three images like bulb, palace and robot for Power Law Transformation. Figure \ref{fig:AHE} shows the original low light image of lamp and enhanced image using Adaptive Histogram Equalization. It is clear enhancement in Figure \ref{fig:AHE}(b). The background objects of in figure \ref{fig:AHE}(b) are more clear than original image. The Absolute Mean Difference(AMD),Root Mean Square and Entropy for Adaptive Histogram Equalization of enhanced image of lamp is $12.9948,10.1784$ and $5.6053$ respectively      
 
 
-\begin{figure}
+\begin{figure}[!htb]
 	\begin{subfigure}{8cm}
 		\centering    
     	\includegraphics[width=7cm,height=9cm,keepaspectratio]{images/ch5/bulb_input.jpg}
@@ -335,7 +335,7 @@ Figure \ref{fig:palaceAHE} shows the original low light image of palace and enha
 %r_adaptive =   14.5370
 %en_adaptive =7.4680
 
-\begin{figure}
+\begin{figure}[!htb]
 	\begin{subfigure}{8cm}
 		\centering    
     	\includegraphics[width=7cm,height=9cm,keepaspectratio]{images/ch5/palace_input.jpg}
@@ -357,7 +357,7 @@ Now consider third input image of robot. This image is also taken in low light a
 %en_adaptive =    7.2511
 
 
-\begin{figure}
+\begin{figure}[!htb]
 	\begin{subfigure}{8cm}
 		\centering    
     	\includegraphics[width=7cm,height=9cm,keepaspectratio]{images/ch5/robot_input.jpg}

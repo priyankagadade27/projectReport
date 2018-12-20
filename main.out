@@ -1,10 +1,10 @@
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
 \BOOKMARK [1][-]{section.1.1}{Introduction}{chapter.1}% 2
 \BOOKMARK [1][-]{section.1.2}{Problem Definition}{chapter.1}% 3
-\BOOKMARK [1][-]{section.1.3}{Objective}{chapter.1}% 4
-\BOOKMARK [1][-]{section.1.4}{Scope}{chapter.1}% 5
-\BOOKMARK [1][-]{section.1.5}{Existing System}{chapter.1}% 6
-\BOOKMARK [1][-]{section.1.6}{Outline}{chapter.1}% 7
+\BOOKMARK [2][-]{subsection.1.2.1}{Objective}{section.1.2}% 4
+\BOOKMARK [2][-]{subsection.1.2.2}{Contribution}{section.1.2}% 5
+\BOOKMARK [1][-]{section.1.3}{Scope}{chapter.1}% 6
+\BOOKMARK [1][-]{section.1.4}{Outline}{chapter.1}% 7
 \BOOKMARK [0][-]{chapter.2}{Related Work}{}% 8
 \BOOKMARK [1][-]{section.2.1}{Digital Image Processing}{chapter.2}% 9
 \BOOKMARK [2][-]{subsection.2.1.1}{Light and visible spectrum}{section.2.1}% 10
@@ -15,30 +15,30 @@
 \BOOKMARK [2][-]{subsection.2.1.6}{Image Enhancement}{section.2.1}% 15
 \BOOKMARK [2][-]{subsection.2.1.7}{Frequency Domain Technique}{section.2.1}% 16
 \BOOKMARK [2][-]{subsection.2.1.8}{Comparison between Spatial Domain Technique And Frequency Domain Technique}{section.2.1}% 17
-\BOOKMARK [1][-]{section.2.2}{BASICS OF RETINEX THEORY}{chapter.2}% 18
-\BOOKMARK [2][-]{subsection.2.2.1}{Overview}{section.2.2}% 19
-\BOOKMARK [2][-]{subsection.2.2.2}{Cone Quanta Catch}{section.2.2}% 20
-\BOOKMARK [2][-]{subsection.2.2.3}{Mondrian Experiments}{section.2.2}% 21
-\BOOKMARK [2][-]{subsection.2.2.4}{Retinex Mechanism}{section.2.2}% 22
-\BOOKMARK [2][-]{subsection.2.2.5}{Retinex in Image Processing}{section.2.2}% 23
-\BOOKMARK [2][-]{subsection.2.2.6}{Retinex in Image Enhancement}{section.2.2}% 24
-\BOOKMARK [0][-]{chapter.3}{Proposed Work}{}% 25
-\BOOKMARK [1][-]{section.3.1}{Introduction}{chapter.3}% 26
-\BOOKMARK [1][-]{section.3.2}{Retinex in Image Processing}{chapter.3}% 27
-\BOOKMARK [2][-]{subsection.3.2.1}{Single Scale Retinex \(SSR\)}{section.3.2}% 28
-\BOOKMARK [2][-]{subsection.3.2.2}{Multiscale Retinex \(MSR\)}{section.3.2}% 29
-\BOOKMARK [2][-]{subsection.3.2.3}{Multiscale retinex with Color Restoration algorithm \(MSRCR\)}{section.3.2}% 30
-\BOOKMARK [1][-]{section.3.3}{Power Law Transformation}{chapter.3}% 31
-\BOOKMARK [1][-]{section.3.4}{Histogram Equalization}{chapter.3}% 32
-\BOOKMARK [2][-]{subsection.3.4.1}{Equalization on Color Image}{section.3.4}% 33
-\BOOKMARK [1][-]{section.3.5}{Adaptive Histogram Equalization\(AHE\) method}{chapter.3}% 34
-\BOOKMARK [2][-]{subsection.3.5.1}{Contrast Limited Adaptive Histogram Equalization \(CLAHE\)}{section.3.5}% 35
-\BOOKMARK [0][-]{chapter.4}{Implementation}{}% 36
-\BOOKMARK [1][-]{section.4.1}{Retinex theory and its typical algorithms }{chapter.4}% 37
-\BOOKMARK [2][-]{subsection.4.1.1}{Single Scale Retinex\(SSR\)}{section.4.1}% 38
-\BOOKMARK [0][-]{chapter.5}{Result and Discussion}{}% 39
-\BOOKMARK [1][-]{section.5.1}{Retinex Model}{chapter.5}% 40
-\BOOKMARK [1][-]{section.5.2}{Power Law Transformation}{chapter.5}% 41
-\BOOKMARK [1][-]{section.5.3}{Histogram Equalization}{chapter.5}% 42
-\BOOKMARK [1][-]{section.5.4}{Adaptive Histogram Equalization}{chapter.5}% 43
-\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 44
+\BOOKMARK [2][-]{subsection.2.1.9}{Retinex in Image Enhancement}{section.2.1}% 18
+\BOOKMARK [0][-]{chapter.3}{Proposed Work}{}% 19
+\BOOKMARK [1][-]{section.3.1}{Introduction}{chapter.3}% 20
+\BOOKMARK [1][-]{section.3.2}{Retinex in Image Processing}{chapter.3}% 21
+\BOOKMARK [2][-]{subsection.3.2.1}{Single Scale Retinex \(SSR\)}{section.3.2}% 22
+\BOOKMARK [2][-]{subsection.3.2.2}{Multiscale Retinex \(MSR\)}{section.3.2}% 23
+\BOOKMARK [2][-]{subsection.3.2.3}{Multiscale retinex with Color Restoration algorithm \(MSRCR\)}{section.3.2}% 24
+\BOOKMARK [1][-]{section.3.3}{Power Law Transformation}{chapter.3}% 25
+\BOOKMARK [1][-]{section.3.4}{Histogram Equalization}{chapter.3}% 26
+\BOOKMARK [2][-]{subsection.3.4.1}{Equalization on Color Image}{section.3.4}% 27
+\BOOKMARK [1][-]{section.3.5}{Adaptive Histogram Equalization\(AHE\) method}{chapter.3}% 28
+\BOOKMARK [2][-]{subsection.3.5.1}{Contrast Limited Adaptive Histogram Equalization \(CLAHE\)}{section.3.5}% 29
+\BOOKMARK [0][-]{chapter.4}{Implementation and Design}{}% 30
+\BOOKMARK [1][-]{section.4.1}{Retinex theory and its typical algorithms }{chapter.4}% 31
+\BOOKMARK [2][-]{subsection.4.1.1}{Single Scale Retinex\(SSR\)}{section.4.1}% 32
+\BOOKMARK [1][-]{section.4.2}{Design}{chapter.4}% 33
+\BOOKMARK [2][-]{subsection.4.2.1}{Flow Chart}{section.4.2}% 34
+\BOOKMARK [2][-]{subsection.4.2.2}{Activity Diagram}{section.4.2}% 35
+\BOOKMARK [2][-]{subsection.4.2.3}{Deployment Diagram}{section.4.2}% 36
+\BOOKMARK [2][-]{subsection.4.2.4}{Component Diagram}{section.4.2}% 37
+\BOOKMARK [0][-]{chapter.5}{Result and Discussion}{}% 38
+\BOOKMARK [1][-]{section.5.1}{Retinex Model}{chapter.5}% 39
+\BOOKMARK [1][-]{section.5.2}{Power Law Transformation}{chapter.5}% 40
+\BOOKMARK [1][-]{section.5.3}{Histogram Equalization}{chapter.5}% 41
+\BOOKMARK [1][-]{section.5.4}{Adaptive Histogram Equalization}{chapter.5}% 42
+\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 43
+\BOOKMARK [0][-]{chapter.6}{Bibliography}{}% 44

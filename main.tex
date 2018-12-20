@@ -7,6 +7,7 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
+\usepackage{float}
 \usepackage[left=1.5in,right=1in,top=2cm,bottom=2cm]{geometry}
 	\graphicspath{{images/}}
 \usepackage{times}
@@ -20,6 +21,9 @@
 \usepackage[bookmarks=true]{hyperref}
 \usepackage{caption}
 \usepackage{natbib}  % Bibliography
+\usepackage[square,sort,comma]{natbib}
+%\usepackage[numbers]{natbib}
+%\usepackage[square,numbers]{natbib}
 \usepackage{subcaption}
 \usepackage{fancyhdr}
 \usepackage{array}
@@ -32,15 +36,15 @@
 \renewcommand{\baselinestretch}{1.5}  % For Spacing
 \usepackage{array}
 \usepackage{multirow}
-
+\setcitestyle{square}
 %==================Edited Commands and Pagelayouts=====
 
 \fancyhead{}
-\fancyhead[RO,LE]{Image Enhancement}
+\fancyhead[RO,LE]{\scriptsize{Enhancement of Low Light Images Via Illumination Map Estimation Using Variational Optimization based Retinex Models}}
 \fancyfoot{}
 \fancyfoot[LE,RO]{\thepage}
-\fancyfoot[LO,CE]{Chapter \thechapter}
-\fancyfoot[CO,RE]{Priyanka B. Waghmode}
+%\fancyfoot[LO,CE]{Chapter \thechapter}
+%\fancyfoot[CO,RE]{Priyanka B. Waghmode}
 
 %\fancyhf{}
 %\fancyhead[RO,LE]{Thesis Title}
@@ -50,7 +54,6 @@
 %\fancyfoot[CE,CO]{\small GF's Godavari College of Engg., Jalgaon}
 %======================================================
 
-
 \begin{document}
 
 %=============Front Matters============================
@@ -59,17 +62,23 @@
 %declaration
 %Ack
 %abstract
+
+
 \include{frontMatter/frontPage}
 
-%========End Front Matters=============================
-
+%%========End Front Matters=============================
+\newpage
+\frontmatter
+\setcounter{page}{1}
+\pagenumbering{roman}
 \include{innerPage/innerPage}
+\include{certificate/certificate}
 \include{certificate/certificate}
 \include{declaration/declaration}
 \include{dissertationApprovalSheet/approvalSheet}
 \include{ack/ack}
 \include{abstract/abstracts}
-
+\newpage
 %======================================================
 
 \tableofcontents
@@ -81,6 +90,10 @@
 \listoftables
 
 %=====================Main Matters====================
+%\mainmatter
+\newpage
+\setcounter{page}{1}
+\pagenumbering{arabic}
 \include{mainMatter/ch1}
 \include{mainMatter/ch2}
 \include{mainMatter/ch3}
@@ -90,16 +103,12 @@
 %==================End Main Matters==================
 
 %=================Back Matter========================
-\bibliographystyle{plainnat}
-%\bibliographystyle{plain}
-%\bibliography{backMatter/myBib}
-
-\begin{appendices}
-
-
-\end{appendices}
-\printnomenclature
-
-
-
+\newpage
+\addcontentsline{toc}{chapter}{Bibliography}
+  \input{myref}
+\bibliographystyle{ieeetr}
+\nocite{*}
+%====================================================
+%\printnomenclature
+\backmatter
 \end{document}

@@ -1,30 +1,40 @@
 \chapter{Introduction}
-Retinex  Theory was formulated by Edwin H. Land In 1964. His theory and an extension, the “reset Retinex” were further formalized by Land and Mc Cann [1]. It was the first attempt to simulate and explain the human visual system how it perceives colours, based on experiments using Mondrian patterns.
+When one captures images in low-light conditions.the images often suffer from low visibility. Besides degrading the visual aesthetics of images, this poor quality may also significantly degenerate the performance of many computer vision and multimedia algorithms that are primarily designed for high-quality inputs. In this paper, we propose a simple yet effective lowlight image enhancement (LIME) method. More concretely, the illumination of each pixel is first estimated individually by finding
+the maximum value in R, G, and B channels. Furthermore,we refine the initial illumination map by imposing a structure prior on it, as the final illumination map. Having the wellconstructed illumination map, the enhancement can be achieved accordingly. Experiments on a number of challenging low-light
+images are present to reveal the efficacy of our LIME and show its superiority over several state-of-the-arts in terms of enhancement quality and efficiency.
 \section{Introduction}
-Besides digital photography, retinex algorithms are used to make the information in astronomical photos visible and detect, in medicine, poorly visible structures in X-rays or scanners. In brief it helps to achieve many features such as sharpening, colour constancy processing and dynamic range compression [5]. The Retinex Image Enhancement Algorithm is an automatic image enhancement method that enhances a digital image in terms of dynamic range compression, colour independence from the spectral distribution of the scene illuminate, and colour/ lightness rendition. The digital image enhanced by the Retinex Image Enhancement Algorithm is much closer to the scene perceived by the human visual system, under all kinds and levels of lighting variations, than the digital image enhanced by any other method [6]. Image enhancement technology has permeated in many areas of science, engineering and civilian, such as biomedicine images, astrophotography, satellite pictures, computer vision, surveillance systems, civilian cameras, etc.[7]
+ high-visibility images reflect clear details of target scenes, which are critical to many visionbased techniques, such as object detection and tracking. But, images captured in low-light conditions are often of low visibility. The visual quality of images captured under low-light conditions, for one thing, is barely satisfactory. For another thing, it very likely hurts the performance of algorithms that are primarily designed for high-visibility inputs. Directly amplifying the low-light image is probably the most intuitive and simplest way to recall the visibility of dark regions. But, this operation gives birth to another problem, say relatively bright regions might be saturated and thus loss corresponding details. Histogram equalization (HE) strategies [3]–[5] can avoid the above problem by somehow forcing the output image to fall in the range [0, 1]. Further, variational methods aim to improve the HE performance by imposing different regularization terms on the histogram. For instance, contextual and variational contrast enhancement (CVC) [6] tries to find a histogram mapping that pays
+attention on large gray-level differences, while the work [7] achieves improvement by seeking a layered difference representation of 2D histograms (LDR). However, in nature, they focus on contrast enhancement instead of exploiting real illumination causes, having the risk of over- and underenhancement. Another solution is Gamma correction that is a nonlinear operation on images. The main drawback is that the nonlinear operation of Gamma correction is carried out on each pixel individually without considering the relationship of a certain pixel with its neighbors, and thus may make enhanced results vulnerable and visually inconsistent with real scenes.
+
+In Retinex theory, the dominant assumption is that the (color) image can be decomposed into two factors,
+say reflectance and illumination. Early attempts based on Retinex, such as single-scale Retinex (SSR) [9] and multi-scale Retinex (MSR), treat the reflectance as the final enhanced result, which often looks unnatural and frequently appears to be over-enhanced. The method proposed in [11] tries to enhance contrast while preserving naturalness of illumination. Although it prevents results from over-enhancement, in our experiments, it performs less impressive than our method in terms of both efficiency and visual quality. Fu et al. proposed a method to adjust the illumination by fusing multiple derivations of the initially estimated illumination map (MF) [12]. The performance of MF is mostly promising. But, due to the blindness of illumination structure, MF may lose the realism of regions with rich textures. The most recent work of [13] proposed a weighted variational model for simultaneous reflectance and illumination estimation (SRIE). With the estimated reflectance and illumination, the target image can be enhanced by manipulating the illumination. As noticed in [14], inverted low-light images look like haze images, as shown in Fig. 2. Based on this observation, the authors of [14] alternatively resorted to dehaze the inverted low-light images. After dehazing, the obtained unrealistic images are inverted again as the final enhanced results.
+
 
 \section{Problem Definition}
-Our system will enhance the input image by applying retinex algorithms: Multi-Scale Retinex with color Restoration (MSRCR), Multi-scale Retinex with Chromaticity Preservation (MSRCP) and Automated Multi-Scale Retinex with Color Restoration (AMSRCR). Thus, the Problem definition can be proposed as follows: To implement the Algorithms: MSRCR, MSRCP and AMSRCR. Also, these algorithms require implementation of Single-Scale Retinex (SSR) algorithm and the SimplestColorBalance algorithm [35].
-\section{Objective}
+Our system will enhance the input image by applying retinex algorithms like Single-Scale Retinex (SSR), Multi-Scale Retinex (MSR) and Multi-Scale Retinex with color Restoration (MSRCR) and power law transformation,Histogram equalization and Adaptive Histogram Equalization. Thus, the Problem definition can be proposed as follows: To implement the Algorithms: Retinex algorithma, power law transformation,Histogram equalization and Adaptive Histogram Equalization.
+\subsection{Objective}
 	\begin{itemize}
-		\item To implement Single-Scale Retinex and Color Restoration Algorithms.
-		\item To implement Multi-Scale Retinex with Color Restoration using above 
-		algorithms (MSRCR).
-		\item To implement Multi-Scale retinex with Chromaticity preservation- MSRCP.(a 
-		modified version of above algorithm).
-		\item To implement Automated Multi-Scale Retinex with Color Restoration algorithm.	
-		(An automated (image independent) approach to MSRCR)- AMSRCR.
+		\item To implement different Retinex Algorithms.
+		\item To implement Power Law Transformation.
+		\item To implement Histogram Equalization.
+		\item To implement Adaptive Histogram Equalization
 	\end{itemize}
-	
+
+\subsection{Contribution}
+Our method belongs to the Retinex-based category, which intends to enhance a low-light image by
+estimating its illumination map. It is worth noting that, different from the traditional Retinex-based methods like that decompose an image into the reflectance and the illumination components, our method only estimates one factor, say the illumination, which shrinks the solution space and reduces the
+computational cost to reach the desired result. The illumination map is first constructed by finding the maximum intensity of each pixel in R, G and B channels. Then, we exploit the structure of the illumination to refine the illumination map.Also we have implemented and compare power law transformation,Histogram equalization and Adaptive Histogram equalization.
+
 \section{Scope}
-The Retinex Image Enhancement Algorithm is an automatic image enhancement method that enhances a digital image in terms of dynamic range compression, colour independence from the spectral distribution of the scene illuminate, and colour/ lightness rendition. So, the scope of this project is to implement the Retinex based image Enhancement Algorithms, which involves the implementation of following three models of retinex algorithms:
+The Retinex Image Enhancement Algorithm is an automatic image enhancement method that enhances a digital image in terms of dynamic range compression, colour independence from the spectral distribution of the scene illuminate, and colour/ lightness rendition. Also implement and compare power law transformation,Histogram equalization and Adaptive Histogram Equalization with retinex algorithm. So, the scope of this project is to implement the Retinex and power law transformation,Histogram equalization and Adaptive Histogram Equalization based image Enhancement Algorithms, which involves the implementation of following three models of retinex algorithms and other:
 	\begin{itemize}
 		\item Multi-Scale Retinex algorithm with color Restoration (MSRCR)
 		\item Multi-Scale Retinex algorithm with Chromaticity Preservation (MSRCP)
 		\item Automated Multi-Scale Retinex algorithm with Color Restoration (AMSRCR)
+		\item Power Law Transformation
+		\item Histogram Equalization
+		\item Adaptive Histogram Equalization
 
 	\end{itemize}
-\section{Existing System}
-The existing image enhancement techniques like auto gain/offset, gamma correction, histogram equalization and homomorphic filtering heavily depend on input images. For auto gain/offset, it could achieve dynamic range compression but at the loss of details due to saturation and clipping. For gamma correction, it is good to improve pictures either too dark or too bright but it is a global function applied to the picture, thus there is no enhancement involved. For histogram equalization and homomorphic filtering, they all failed for bi-modal pictures, which include both dark and bright areas. But for retinex, it could achieve satisfactory results for both pictures, thus its benefits are obviously to see.[8]
 \section{Outline}
-This project report is organized into six chapters: Chapter 1 introduces the project; chapter 2 describes related work and reviews previous works; Chapter 3 presents the technology that will be used. Chapter 4 presents the system analysis and design in detail, chapter 5 presents the results and Chapter 6 is the Conclusion.
+This project report is organized into six chapters: Chapter 1 introduces the project; chapter 2 describes related work. Chapter 3 presents the proposed technology that will be used. Chapter 4 presents implementation, design and analysis of the system analysis.chapter 5 presents the results and discussion and last chapter 6 is the Conclusion.
